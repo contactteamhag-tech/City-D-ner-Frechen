@@ -20,7 +20,19 @@
     --gold2:#f6d365;
     --shadow:0 16px 40px rgba(0,0,0,.35);
   }
-  body{background:var(--bg);color:#fff;line-height:1.6;}
+  body{
+  color:#fff;
+  line-height:1.6;
+
+  /* Muster-Hintergrund (pattern.webp) + dunkler Overlay, damit Text/Boxen perfekt lesbar bleiben */
+  background:
+    linear-gradient(rgba(18,5,31,.88), rgba(18,5,31,.88)),
+    url("images/pattern.webp");
+  background-repeat: repeat;
+  background-size: 520px auto;   /* Mustergröße – kannst du bei Bedarf kleiner/größer machen */
+  background-position: center top;
+  background-attachment: fixed;  /* optional: wirkt “luxury”, kannst du auch löschen */
+}
 
   header{
     background:
