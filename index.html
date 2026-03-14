@@ -23,19 +23,19 @@
 
   <style>
     :root{
-      --bg:#12051f;
-      --bg2:#1a0b28;
-      --bg3:#261039;
-      --card:rgba(255,255,255,0.055);
-      --card-strong:rgba(255,255,255,0.09);
-      --border:rgba(255,255,255,0.11);
+      --bg:#2a1338;
+      --bg2:#34184a;
+      --bg3:#46235f;
+      --card:rgba(255,255,255,0.07);
+      --card-strong:rgba(255,255,255,0.11);
+      --border:rgba(255,255,255,0.13);
       --text:#ffffff;
-      --muted:rgba(255,255,255,0.82);
-      --soft:rgba(255,255,255,0.68);
+      --muted:rgba(255,255,255,0.84);
+      --soft:rgba(255,255,255,0.72);
       --gold:#d4af37;
       --gold2:#f6d365;
-      --gold-soft:rgba(212,175,55,0.16);
-      --shadow:0 18px 48px rgba(0,0,0,0.38);
+      --gold-soft:rgba(212,175,55,0.19);
+      --shadow:0 18px 48px rgba(0,0,0,0.32);
       --radius:24px;
       --radius-sm:16px;
       --max:1240px;
@@ -57,7 +57,9 @@
       color:var(--text);
       line-height:1.7;
       background:
-        linear-gradient(rgba(18,5,31,.90), rgba(18,5,31,.94)),
+        linear-gradient(rgba(42,19,56,.78), rgba(42,19,56,.86)),
+        radial-gradient(circle at 18% 16%, rgba(246,211,101,.16), transparent 28%),
+        radial-gradient(circle at 82% 22%, rgba(212,175,55,.13), transparent 24%),
         url("images/pattern.webp");
       background-repeat:repeat;
       background-size:520px auto;
@@ -102,7 +104,7 @@
       top:0;
       z-index:1000;
       backdrop-filter:blur(14px);
-      background:rgba(16,6,25,0.84);
+      background:rgba(30,12,42,0.78);
       border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
@@ -190,7 +192,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(180deg, transparent 0%, rgba(18,5,31,.12) 60%, rgba(18,5,31,.64) 100%);
+      background:linear-gradient(180deg, transparent 0%, rgba(42,19,56,.10) 60%, rgba(42,19,56,.56) 100%);
       pointer-events:none;
     }
 
@@ -727,7 +729,7 @@
     footer{
       padding:34px 0 48px;
       border-top:1px solid rgba(255,255,255,.08);
-      background:#0b0215;
+      background:#190a26;
     }
 
     .footer-inner{
