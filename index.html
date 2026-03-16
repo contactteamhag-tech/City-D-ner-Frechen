@@ -4,11 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>City Döner Frechen – Döner, Pizza, Lahmacun & Schnitzel</title>
-  <meta name="description" content="City Döner Frechen in der Hauptstraße 135: Döner, Dürüm, Lahmacun, Pizza, Schnitzel und vegetarische Gerichte. Modernes Design mit eigener Bestellanfrage für Abholung oder Lieferung." />
+  <meta
+    name="description"
+    content="City Döner Frechen in der Hauptstraße 135: Döner, Dürüm, Lahmacun, Pizza, Schnitzel und vegetarische Gerichte. Moderne Website mit integrierter Bestellanfrage für Abholung oder Lieferung."
+  />
   <meta name="theme-color" content="#f6b300" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
     :root{
       --bg:#f8fafc;
@@ -44,37 +52,63 @@
       line-height:1.55;
       overflow-x:hidden;
     }
+
     img{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
     button,input,select,textarea{font:inherit}
     .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
     .section{padding:92px 0}
     .grid{display:grid;gap:20px}
+
     .eyebrow{
       display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;
       background:rgba(245,180,0,.12);color:#946700;border:1px solid rgba(245,180,0,.22);
       font-size:.88rem;font-weight:800;letter-spacing:.02em;
     }
-    .eyebrow::before{content:'';width:9px;height:9px;border-radius:999px;background:var(--accent)}
+    .eyebrow::before{
+      content:'';
+      width:9px;height:9px;border-radius:999px;background:var(--accent)
+    }
+
     .headline{font-family:'Playfair Display', serif;letter-spacing:-.02em}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
-    .section-head h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.02;max-width:700px}
+
+    .section-head{
+      display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:36px
+    }
+    .section-head h2{
+      font-size:clamp(2rem,4vw,3.4rem);line-height:1.02;max-width:700px
+    }
     .section-head p{max-width:600px;color:var(--muted)}
+
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       border:none;cursor:pointer;border-radius:999px;padding:15px 22px;font-weight:800;
       transition:.22s ease;white-space:nowrap;
     }
     .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#1a1a1a;box-shadow:0 16px 36px rgba(245,180,0,.28)}
-    .btn-secondary{background:#fff;border:1px solid var(--line-strong);color:var(--text);box-shadow:var(--shadow-soft)}
+    .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#1a1a1a;box-shadow:0 16px 36px rgba(245,180,0,.28)
+    }
+    .btn-secondary{
+      background:#fff;border:1px solid var(--line-strong);color:var(--text);box-shadow:var(--shadow-soft)
+    }
     .btn-dark{background:#111827;color:#fff}
-    .pill{padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem;color:#334155}
+
+    .pill{
+      padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem;color:#334155
+    }
+
     .card{
       background:linear-gradient(180deg,var(--card-strong),var(--card));
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
+    }
+
+    .icon-inline{
+      width:18px;height:18px;display:inline-block;vertical-align:middle;flex:0 0 18px
     }
 
     header{
@@ -83,9 +117,11 @@
       background:rgba(255,255,255,.78);
       border-bottom:1px solid rgba(15,23,42,.06);
     }
+
     .nav{
       display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:80px;
     }
+
     .brand{display:flex;align-items:center;gap:14px}
     .brand-mark{
       width:52px;height:52px;border-radius:16px;display:grid;place-items:center;
@@ -94,12 +130,16 @@
     }
     .brand-copy strong{display:block;font-size:1rem;line-height:1}
     .brand-copy span{display:block;color:var(--muted);font-size:.82rem;margin-top:4px}
+
     .nav-links{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
     .nav-links a{font-weight:700;color:#334155;font-size:.95rem}
+
     .nav-actions{display:flex;align-items:center;gap:12px}
+    .social-btn svg{color:#d62976}
 
     .hero{padding:34px 0 18px}
     .hero-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:stretch}
+
     .hero-main{
       min-height:680px;padding:34px;position:relative;overflow:hidden;
       background:
@@ -108,22 +148,28 @@
         url('https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
     }
     .hero-main::before{
-      content:'';position:absolute;inset:auto -80px -80px auto;width:280px;height:280px;border-radius:50%;
+      content:'';
+      position:absolute;inset:auto -80px -80px auto;width:280px;height:280px;border-radius:50%;
       background:radial-gradient(circle, rgba(226,75,43,.18), transparent 70%);
     }
+
     .hero-copy{position:relative;z-index:2;max-width:760px}
-    .hero-copy h1{font-size:clamp(2.8rem,6.8vw,5.8rem);line-height:.92;margin:18px 0 16px;letter-spacing:-.05em}
+    .hero-copy h1{
+      font-size:clamp(2.8rem,6.8vw,5.8rem);
+      line-height:.92;margin:18px 0 16px;letter-spacing:-.05em
+    }
     .hero-copy p{font-size:1.05rem;max-width:640px;color:#334155}
     .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
     .hero-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .hero-note-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+    .hero-badges{display:flex;gap:10px;flex-wrap:wrap}
+
     .stat{
-      min-width:155px;padding:18px;border-radius:22px;background:rgba(255,255,255,.76);border:1px solid rgba(15,23,42,.08);
-      box-shadow:var(--shadow-soft)
+      min-width:155px;padding:18px;border-radius:22px;background:rgba(255,255,255,.76);
+      border:1px solid rgba(15,23,42,.08);box-shadow:var(--shadow-soft)
     }
     .stat strong{display:block;font-size:1.5rem;line-height:1.05}
     .stat span{display:block;color:var(--muted);font-size:.92rem;margin-top:6px}
-    .hero-badges{display:flex;gap:10px;flex-wrap:wrap}
-    .hero-note-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
 
     .hero-side{display:grid;gap:18px}
     .side-card{padding:24px}
@@ -134,8 +180,12 @@
     }
     .mini-row:last-child,.summary-row:last-child,.cart-row:last-child{border-bottom:none}
     .price{font-weight:900;color:#a56f00}
+
     .top-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .top-card{padding:12px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-soft)}
+    .top-card{
+      padding:12px;background:#fff;border:1px solid var(--line);
+      border-radius:22px;box-shadow:var(--shadow-soft)
+    }
     .top-card img{height:180px;width:100%;object-fit:cover;border-radius:16px}
     .top-card h4{margin:14px 0 6px;font-size:1.05rem}
     .top-card p{color:var(--muted);font-size:.92rem;min-height:44px}
@@ -156,19 +206,26 @@
       display:flex;gap:12px;align-items:flex-start;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:18px
     }
     .story-points b{display:block;margin-bottom:4px}
-    .check{width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;border-radius:999px;background:rgba(15,159,103,.12);color:var(--success);font-weight:900;margin-top:2px}
+    .check{
+      width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;border-radius:999px;
+      background:rgba(15,159,103,.12);color:var(--success);font-weight:900;margin-top:2px
+    }
 
-    .menu-wrap{display:grid;grid-template-columns:1fr 380px;gap:22px;align-items:start}
+    .menu-wrap{display:grid;grid-template-columns:1fr;gap:22px;align-items:start}
     .menu-panel{padding:28px}
     .menu-search{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
     .search-input{
       flex:1;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;color:var(--text)
     }
+
     .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
     .tab-btn{
       border:1px solid var(--line);background:#fff;color:#334155;cursor:pointer;border-radius:999px;padding:11px 16px;font-weight:800
     }
-    .tab-btn.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#111;border-color:transparent}
+    .tab-btn.active{
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#111;border-color:transparent
+    }
+
     .menu-list{display:grid;gap:14px}
     .menu-item{
       background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;display:grid;gap:10px
@@ -177,43 +234,127 @@
     .menu-top h3{font-size:1.08rem;line-height:1.15}
     .menu-desc{color:var(--muted);font-size:.95rem}
     .menu-tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:.8rem;color:#475569}
-    .menu-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-    .qty{
-      display:flex;align-items:center;gap:8px
+    .tag{
+      padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:.8rem;color:#475569
     }
+    .menu-actions{
+      display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap
+    }
+
+    .qty,.qty-cart{display:flex;align-items:center;gap:8px}
     .qty button,.qty-cart button{
-      width:36px;height:36px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.08rem
+      width:36px;height:36px;border-radius:999px;border:1px solid var(--line);
+      background:#fff;cursor:pointer;font-size:1.08rem
     }
     .qty-value{min-width:24px;text-align:center;font-weight:900}
 
-    .order-card{padding:24px;position:sticky;top:100px}
-    .order-card h3{font-size:1.34rem;margin-bottom:8px}
-    .order-card p{color:var(--muted)}
-    .order-type{display:grid;gap:10px;margin:18px 0}
-    .order-type label{
-      display:flex;gap:10px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:18px;background:#fff;font-weight:700
+    .order-integrated{
+      margin-top:20px;
+      padding:30px;
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.92)),
+        radial-gradient(circle at top right, rgba(245,180,0,.14), transparent 28%);
     }
-    .field-group{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+    .order-integrated::before{
+      content:'';
+      position:absolute;top:-90px;right:-90px;width:240px;height:240px;border-radius:50%;
+      background:radial-gradient(circle, rgba(245,180,0,.18), transparent 70%);
+      pointer-events:none;
+    }
+
+    .order-intro{
+      display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;
+      margin-bottom:22px;position:relative;z-index:1
+    }
+    .order-intro h3{font-size:1.5rem;margin-top:12px}
+    .order-intro p{color:var(--muted);max-width:760px}
+
+    .order-shell{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:start;position:relative;z-index:1
+    }
+    .checkout-pane,.cart-pane{
+      background:rgba(255,255,255,.76);
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:22px;padding:20px;backdrop-filter:blur(10px)
+    }
+
+    .checkout-head,.cart-head{
+      display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:10px
+    }
+    .checkout-head h4,.cart-head h4{font-size:1.12rem}
+    .checkout-head p,.cart-head p{color:var(--muted);font-size:.92rem;max-width:420px}
+
+    .cart-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+
+    .order-type{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0
+    }
+    .order-type label{
+      display:flex;gap:10px;align-items:center;justify-content:center;padding:15px 16px;
+      border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.86);
+      font-weight:800;box-shadow:var(--shadow-soft);cursor:pointer;transition:.2s ease
+    }
+    .order-type label:hover{transform:translateY(-1px)}
+    .order-type label.active{
+      background:linear-gradient(135deg, rgba(245,180,0,.16), rgba(255,255,255,.95));
+      border-color:rgba(245,180,0,.35);color:#7a5600
+    }
+
+    .field-group{
+      display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:16px
+    }
     .field-group .full{grid-column:1/-1}
+    .field-group label:nth-child(1),
+    .field-group label:nth-child(2),
+    .field-group label:nth-child(4),
+    .field-group label:nth-child(5){grid-column:span 6}
+    .field-group label:nth-child(3),
+    .field-group label:nth-child(6){grid-column:1/-1}
+
+    .input-label{
+      font-size:.84rem;font-weight:800;letter-spacing:.01em;color:#334155
+    }
+
     .field,.select,.textarea{
-      width:100%;margin-top:8px;padding:14px 15px;border-radius:16px;border:1px solid var(--line);background:#fff;color:var(--text);outline:none
+      width:100%;margin-top:8px;padding:15px 16px;border-radius:16px;border:1px solid var(--line);
+      background:rgba(255,255,255,.96);color:var(--text);outline:none;
+      box-shadow:0 6px 18px rgba(15,23,42,.04)
+    }
+    .field:focus,.select:focus,.textarea:focus{
+      border-color:rgba(245,180,0,.45);box-shadow:0 0 0 4px rgba(245,180,0,.10)
     }
     .textarea{resize:vertical;min-height:108px}
+
     .cart-items{display:grid;gap:10px;margin-top:18px}
-    .empty-box{padding:16px;border-radius:18px;border:1px dashed var(--line-strong);color:var(--muted);background:#fff;margin-top:16px}
-    .qty-cart{display:flex;align-items:center;gap:8px}
+    .empty-box{
+      padding:16px;border-radius:18px;border:1px dashed var(--line-strong);color:var(--muted);background:#fff;margin-top:16px
+    }
+
     .summary{padding-top:12px;border-top:1px solid rgba(15,23,42,.08);margin-top:10px}
     .summary .total strong,.summary .total span{font-size:1.2rem}
+
+    .submit-row{
+      display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px
+    }
+
     .helper{font-size:.88rem;color:var(--muted)}
+
     .success,.error{
       margin-top:14px;padding:14px 16px;border-radius:16px;display:none;font-size:.95rem
     }
-    .success{background:rgba(15,159,103,.10);border:1px solid rgba(15,159,103,.22);color:#0b7f52}
-    .error{background:rgba(226,75,43,.10);border:1px solid rgba(226,75,43,.22);color:#a5351f}
+    .success{
+      background:rgba(15,159,103,.10);border:1px solid rgba(15,159,103,.22);color:#0b7f52
+    }
+    .error{
+      background:rgba(226,75,43,.10);border:1px solid rgba(226,75,43,.22);color:#a5351f
+    }
 
     .gallery-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:18px}
-    .gallery-card{overflow:hidden;border-radius:24px;min-height:260px;position:relative;border:1px solid var(--line);box-shadow:var(--shadow)}
+    .gallery-card{
+      overflow:hidden;border-radius:24px;min-height:260px;position:relative;border:1px solid var(--line);box-shadow:var(--shadow)
+    }
     .gallery-card img{width:100%;height:100%;object-fit:cover}
     .gallery-card.large{min-height:540px}
     .gallery-overlay{
@@ -227,7 +368,8 @@
     .info-card{padding:26px}
     .icon{
       width:54px;height:54px;border-radius:18px;display:grid;place-items:center;
-      background:linear-gradient(135deg, rgba(245,180,0,.22), rgba(226,75,43,.12));font-weight:900;color:#8f6000;font-size:1.2rem
+      background:linear-gradient(135deg, rgba(245,180,0,.22), rgba(226,75,43,.12));
+      font-weight:900;color:#8f6000;font-size:1.2rem
     }
     .info-card h3{margin:14px 0 10px;font-size:1.16rem}
     .info-card p{color:var(--muted)}
@@ -235,7 +377,9 @@
     .contact-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:22px;align-items:stretch}
     .contact-card{padding:30px}
     .contact-card h3{font-size:1.4rem;margin-bottom:12px}
-    .contact-row{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(15,23,42,.07)}
+    .contact-row{
+      display:flex;justify-content:space-between;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(15,23,42,.07)
+    }
     .contact-row:last-child{border-bottom:none}
     .contact-row span{color:var(--muted);min-width:120px}
     .hours{display:grid;gap:8px;list-style:none;width:100%}
@@ -244,31 +388,44 @@
     .map-card iframe{width:100%;height:100%;border:0}
 
     footer{padding:22px 0 42px;border-top:1px solid rgba(15,23,42,.06)}
-    .footer-wrap{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+    .footer-wrap{
+      display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap
+    }
     .footer-wrap p{color:var(--muted)}
     .footer-links{display:flex;gap:18px;flex-wrap:wrap;color:#334155}
+    .footer-social{
+      display:inline-flex;align-items:center;gap:8px;font-weight:700
+    }
 
     .sticky-bar{
       position:fixed;left:16px;right:16px;bottom:16px;z-index:55;display:none;
-      background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border:1px solid var(--line-strong);border-radius:22px;padding:14px;box-shadow:var(--shadow)
+      background:rgba(255,255,255,.92);backdrop-filter:blur(14px);
+      border:1px solid var(--line-strong);border-radius:22px;padding:14px;box-shadow:var(--shadow)
     }
     .sticky-inner{display:flex;justify-content:space-between;gap:12px;align-items:center}
 
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease, transform .55s ease}
+    .reveal{
+      opacity:0;transform:translateY(22px);transition:opacity .55s ease, transform .55s ease
+    }
     .reveal.visible{opacity:1;transform:translateY(0)}
 
     @media (max-width:1120px){
-      .hero-layout,.story-layout,.menu-wrap,.contact-layout{grid-template-columns:1fr}
-      .top-grid,.gallery-grid,.info-grid{grid-template-columns:1fr 1fr}
-      .order-card{position:static}
+      .hero-layout,.story-layout,.contact-layout{grid-template-columns:1fr}
+      .top-grid,.gallery-grid,.info-grid,.order-shell{grid-template-columns:1fr 1fr}
     }
+
     @media (max-width:780px){
       .nav-links{display:none}
       .nav-actions .btn-secondary{display:none}
       .hero-main{min-height:unset;padding:26px}
-      .field-group,.top-grid,.gallery-grid,.info-grid{grid-template-columns:1fr}
+      .field-group,.top-grid,.gallery-grid,.info-grid,.order-shell,.order-type,.submit-row{grid-template-columns:1fr}
+      .field-group label:nth-child(1),
+      .field-group label:nth-child(2),
+      .field-group label:nth-child(4),
+      .field-group label:nth-child(5){grid-column:1/-1}
       .section{padding:72px 0}
       .sticky-bar{display:block}
+      .contact-row,.hours li{flex-direction:column;align-items:flex-start}
     }
   </style>
 </head>
@@ -282,6 +439,7 @@
           <span>Halal Food · Döner · Pizza · Lahmacun</span>
         </div>
       </a>
+
       <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="#menu">Speisekarte</a>
         <a href="#bestseller">Bestseller</a>
@@ -289,8 +447,16 @@
         <a href="#order">Bestellen</a>
         <a href="#contact">Kontakt</a>
       </nav>
+
       <div class="nav-actions">
-        <a class="btn btn-secondary" href="https://www.instagram.com/citydoener_frechen/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-secondary social-btn" href="https://www.instagram.com/citydoener_frechen/" target="_blank" rel="noopener" aria-label="Instagram von City Döner Frechen">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+          </svg>
+          Instagram
+        </a>
         <a class="btn btn-primary" href="#order">Jetzt bestellen</a>
       </div>
     </div>
@@ -306,20 +472,26 @@
               <span class="pill">Hauptstraße 135</span>
               <span class="pill">Täglich 11:00–22:00</span>
             </div>
+
             <h1 class="headline">City Döner Frechen.<br>Modern, direkt, appetitlich.</h1>
+
             <p>
-              Eine helle Premium-Website für City Döner Frechen mit markanter Optik, klarer Speisekarte und eigener Bestellanfrage.
-              Die Seite verbindet modernes Fast-Casual-Design mit einer luxuriösen, aufgeräumten Struktur.
+              Eine helle Premium-Website für City Döner Frechen mit markanter Optik, klarer Speisekarte
+              und eigener Bestellanfrage. Die Seite verbindet modernes Fast-Casual-Design mit einer
+              luxuriösen, aufgeräumten Struktur.
             </p>
+
             <div class="hero-actions">
               <a class="btn btn-primary" href="#menu">Speisekarte ansehen</a>
               <a class="btn btn-secondary" href="#order">Online anfragen</a>
             </div>
+
             <div class="hero-stats">
               <div class="stat"><strong>42</strong><span>Gerichte auf der Karte</span></div>
               <div class="stat"><strong>15 €</strong><span>Lieferung ab Mindestwert</span></div>
               <div class="stat"><strong>2</strong><span>Telefonnummern für Kontakt</span></div>
             </div>
+
             <div class="hero-note-row">
               <span class="pill">Döner</span>
               <span class="pill">Dürüm</span>
@@ -341,6 +513,7 @@
               <div class="mini-row"><span>Pizza Döner</span><strong class="price">11,50 €</strong></div>
             </div>
           </div>
+
           <div class="card side-card">
             <h3>Perfekt für dein eigenes System</h3>
             <p style="color:var(--muted)">
@@ -348,6 +521,7 @@
               Vorher läuft die Bestellung sauber als Anfrage per WhatsApp oder E-Mail.
             </p>
           </div>
+
           <div class="card side-card">
             <h3>Kontakt auf einen Blick</h3>
             <div class="top-sellers">
@@ -372,6 +546,7 @@
             Große Produktkarten, saubere Typografie und hochwertigere Bildsprache als bei typischen Imbissseiten.
           </p>
         </div>
+
         <div class="top-grid">
           <article class="top-card reveal">
             <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=1200&q=80" alt="Premium Döner im Brot" />
@@ -379,12 +554,14 @@
             <p>Kalb- oder Hähnchenfleisch im Fladenbrot mit Salat und Sauce.</p>
             <strong class="price">7,00 €</strong>
           </article>
+
           <article class="top-card reveal">
             <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80" alt="Pizza frisch aus dem Ofen" />
             <h4>Pizza Döner</h4>
             <p>Mit Kalb- oder Hähnchenfleisch, modern inszeniert für die Website.</p>
             <strong class="price">11,50 €</strong>
           </article>
+
           <article class="top-card reveal">
             <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80" alt="Dürüm und Falafel Teller" />
             <h4>Döner Dürüm</h4>
@@ -398,6 +575,7 @@
     <section class="section">
       <div class="container story-layout">
         <div class="story-photo reveal" aria-label="Mood-Bild für City Döner Frechen"></div>
+
         <div class="story-card card reveal">
           <span class="eyebrow">Über den Standort</span>
           <h2 class="headline">Ein moderner Auftritt für einen neuen Döner-Standort in Frechen</h2>
@@ -405,10 +583,20 @@
             Diese Version setzt auf einen hellen, hochwertigen Look statt auf das übliche dunkle Standard-Imbissdesign.
             Dadurch wirkt City Döner Frechen frischer, seriöser und moderner – gerade auf dem Smartphone.
           </p>
+
           <ul class="story-points">
-            <li><div class="check">✓</div><div><b>Luxuriös und trotzdem einfach</b> Klare Navigation, sanfte Schatten, goldene Akzente und eine starke Food-Präsentation.</div></li>
-            <li><div class="check">✓</div><div><b>Alle wichtigen Daten sofort sichtbar</b> Adresse, Telefonnummern, Öffnungszeiten, Lieferinfo und Speisekarte ohne langes Suchen.</div></li>
-            <li><div class="check">✓</div><div><b>Bereit für spätere Zahlung</b> Bestellanfrage jetzt schon funktionsfähig, Online-Zahlung später über Stripe oder SumUp ergänzbar.</div></li>
+            <li>
+              <div class="check">✓</div>
+              <div><b>Luxuriös und trotzdem einfach</b> Klare Navigation, sanfte Schatten, goldene Akzente und eine starke Food-Präsentation.</div>
+            </li>
+            <li>
+              <div class="check">✓</div>
+              <div><b>Alle wichtigen Daten sofort sichtbar</b> Adresse, Telefonnummern, Öffnungszeiten, Lieferinfo und Speisekarte ohne langes Suchen.</div>
+            </li>
+            <li>
+              <div class="check">✓</div>
+              <div><b>Bereit für spätere Zahlung</b> Bestellanfrage jetzt schon funktionsfähig, Online-Zahlung später über Stripe oder SumUp ergänzbar.</div>
+            </li>
           </ul>
         </div>
       </div>
@@ -422,15 +610,22 @@
             <h2 class="headline">Alle Preise sauber strukturiert – modern statt überladen</h2>
           </div>
           <p>
-            Die Karte basiert auf deiner eingesendeten Preisübersicht. Du kannst später jederzeit Produkte, Beschreibungen oder Bilder austauschen.
+            Die Karte basiert auf deiner eingesendeten Preisübersicht. Du kannst später jederzeit Produkte,
+            Beschreibungen oder Bilder austauschen.
           </p>
         </div>
 
         <div class="menu-wrap">
           <div class="card menu-panel reveal">
             <div class="menu-search">
-              <input id="menuSearch" class="search-input" type="text" placeholder="Gericht suchen, z. B. Döner, Pizza, Falafel ..." />
+              <input
+                id="menuSearch"
+                class="search-input"
+                type="text"
+                placeholder="Gericht suchen, z. B. Döner, Pizza, Falafel ..."
+              />
             </div>
+
             <div class="tabs">
               <button class="tab-btn active" data-filter="all">Alle</button>
               <button class="tab-btn" data-filter="doener">Döner</button>
@@ -439,70 +634,121 @@
               <button class="tab-btn" data-filter="schnitzel">Schnitzel</button>
               <button class="tab-btn" data-filter="veggie">Veggie</button>
             </div>
+
             <div class="menu-list" id="menuList"></div>
+
+            <div class="card order-integrated reveal" id="order">
+              <div class="order-intro">
+                <div>
+                  <span class="eyebrow">Bestellanfrage direkt unter der Karte</span>
+                  <h3>Waagerecht integriert und deutlich hochwertiger eingebunden</h3>
+                  <p>
+                    Der Bestellbereich sitzt jetzt direkt unter der Speisekarte und wirkt wie ein natürlicher,
+                    moderner Teil der Seite – nicht wie ein billiger, separater Formularblock.
+                  </p>
+                </div>
+                <span class="pill">Lieferung ab 15,00 €</span>
+              </div>
+
+              <div class="order-shell">
+                <div class="checkout-pane">
+                  <div class="checkout-head" style="margin-bottom:16px">
+                    <div>
+                      <h4>Deine Angaben</h4>
+                      <p>Abholung oder Lieferung auswählen und Kontaktdaten eintragen.</p>
+                    </div>
+                  </div>
+
+                  <div class="order-type" id="orderTypeWrap">
+                    <label class="active"><input type="radio" name="orderType" value="Abholung" checked> Abholung</label>
+                    <label><input type="radio" name="orderType" value="Lieferung"> Lieferung</label>
+                  </div>
+
+                  <div class="field-group">
+                    <label>
+                      <span class="input-label">Name</span>
+                      <input id="customerName" class="field" type="text" placeholder="Max Mustermann" />
+                    </label>
+
+                    <label>
+                      <span class="input-label">Telefon</span>
+                      <input id="customerPhone" class="field" type="tel" placeholder="0176 12345678" />
+                    </label>
+
+                    <label class="full">
+                      <span class="input-label">Adresse</span>
+                      <input id="customerAddress" class="field" type="text" placeholder="Nur bei Lieferung: Straße, Hausnummer, Ort" />
+                    </label>
+
+                    <label>
+                      <span class="input-label">Uhrzeit</span>
+                      <select id="customerTime" class="select">
+                        <option>Schnellstmöglich</option>
+                        <option>In 15 Minuten</option>
+                        <option>In 30 Minuten</option>
+                        <option>In 45 Minuten</option>
+                      </select>
+                    </label>
+
+                    <label>
+                      <span class="input-label">Zahlung</span>
+                      <select id="customerPayment" class="select">
+                        <option>Bar</option>
+                        <option>Karte vor Ort</option>
+                        <option>Online später integrieren</option>
+                      </select>
+                    </label>
+
+                    <label class="full">
+                      <span class="input-label">Anmerkung</span>
+                      <textarea id="customerNote" class="textarea" placeholder="z. B. ohne Zwiebeln, extra scharf"></textarea>
+                    </label>
+                  </div>
+
+                  <div class="success" id="successBox"></div>
+                  <div class="error" id="errorBox"></div>
+                </div>
+
+                <div class="cart-pane">
+                  <div class="cart-head">
+                    <div>
+                      <h4>Dein Warenkorb</h4>
+                      <p>Direkt in die Seite eingebettet und optisch aufgewertet.</p>
+                    </div>
+                  </div>
+
+                  <div class="cart-badges">
+                    <span class="pill">Abholung & Lieferung</span>
+                    <span class="pill">WhatsApp-Order</span>
+                    <span class="pill">Direkt integriert</span>
+                  </div>
+
+                  <div class="cart-items" id="cartItems"></div>
+                  <div class="empty-box" id="emptyBox">Noch nichts im Warenkorb.</div>
+
+                  <div class="summary">
+                    <div class="summary-row"><span>Zwischensumme</span><strong id="subtotal">0,00 €</strong></div>
+                    <div class="summary-row"><span>Liefergebühr</span><strong id="deliveryFee">0,00 €</strong></div>
+                    <div class="summary-row total"><span>Gesamt</span><strong id="total">0,00 €</strong></div>
+                  </div>
+
+                  <div class="submit-row">
+                    <button class="btn btn-primary" onclick="submitOrder()">
+                      <svg class="icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 20L20 12L4 4L6.5 10.5L14 12L6.5 13.5L4 20Z" fill="currentColor"/>
+                      </svg>
+                      Per WhatsApp senden
+                    </button>
+                    <button class="btn btn-secondary" onclick="clearCart()">Leeren</button>
+                  </div>
+
+                  <p class="helper" style="margin-top:12px">
+                    Stripe oder SumUp kann später als echter Checkout direkt an dieser Stelle ergänzt werden.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <aside class="card order-card reveal" id="order">
-            <h3>Bestellanfrage</h3>
-            <p>Jetzt schon direkt nutzbar. Sendet die Bestellung per WhatsApp an den Laden.</p>
-
-            <div class="order-type">
-              <label><input type="radio" name="orderType" value="Abholung" checked> Abholung</label>
-              <label><input type="radio" name="orderType" value="Lieferung"> Lieferung</label>
-            </div>
-
-            <div class="field-group">
-              <label>
-                Name
-                <input id="customerName" class="field" type="text" placeholder="Max Mustermann" />
-              </label>
-              <label>
-                Telefon
-                <input id="customerPhone" class="field" type="tel" placeholder="0176 12345678" />
-              </label>
-              <label class="full">
-                Adresse
-                <input id="customerAddress" class="field" type="text" placeholder="Straße, Hausnummer, Ort" />
-              </label>
-              <label>
-                Uhrzeit
-                <select id="customerTime" class="select">
-                  <option>Schnellstmöglich</option>
-                  <option>In 15 Minuten</option>
-                  <option>In 30 Minuten</option>
-                  <option>In 45 Minuten</option>
-                </select>
-              </label>
-              <label>
-                Zahlung
-                <select id="customerPayment" class="select">
-                  <option>Bar</option>
-                  <option>Karte vor Ort</option>
-                  <option>Online später integrieren</option>
-                </select>
-              </label>
-              <label class="full">
-                Anmerkung
-                <textarea id="customerNote" class="textarea" placeholder="z. B. ohne Zwiebeln, extra scharf"></textarea>
-              </label>
-            </div>
-
-            <div class="cart-items" id="cartItems"></div>
-            <div class="empty-box" id="emptyBox">Noch nichts im Warenkorb.</div>
-
-            <div class="summary">
-              <div class="summary-row"><span>Zwischensumme</span><strong id="subtotal">0,00 €</strong></div>
-              <div class="summary-row"><span>Liefergebühr</span><strong id="deliveryFee">0,00 €</strong></div>
-              <div class="summary-row total"><span>Gesamt</span><strong id="total">0,00 €</strong></div>
-            </div>
-            <div style="display:grid;gap:10px;margin-top:18px">
-              <button class="btn btn-primary" onclick="submitOrder()">Per WhatsApp senden</button>
-              <button class="btn btn-secondary" onclick="clearCart()">Warenkorb leeren</button>
-            </div>
-            <p class="helper" style="margin-top:12px">Lieferung laut Karte ab 15,00 €. Für Online-Zahlung kann später Stripe/SumUp ergänzt werden.</p>
-            <div class="success" id="successBox"></div>
-            <div class="error" id="errorBox"></div>
-          </aside>
         </div>
       </div>
     </section>
@@ -518,18 +764,30 @@
             Diese Bilder sind hochwertige Platzhalter. Für die finale Version solltest du echte Fotos von City Döner Frechen ergänzen.
           </p>
         </div>
+
         <div class="gallery-grid">
           <div class="gallery-card large reveal">
             <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80" alt="Pizza und Streetfood" />
-            <div class="gallery-overlay"><strong>Pizza & Ofengerichte</strong><span>Visuell stark für Startseite, Social Media und Delivery-Fokus.</span></div>
+            <div class="gallery-overlay">
+              <strong>Pizza & Ofengerichte</strong>
+              <span>Visuell stark für Startseite, Social Media und Delivery-Fokus.</span>
+            </div>
           </div>
+
           <div class="gallery-card reveal">
             <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Schnitzel mit Pommes" />
-            <div class="gallery-overlay"><strong>Schnitzel</strong><span>Mit Pommes oder Reis laut Karte.</span></div>
+            <div class="gallery-overlay">
+              <strong>Schnitzel</strong>
+              <span>Mit Pommes oder Reis laut Karte.</span>
+            </div>
           </div>
+
           <div class="gallery-card reveal">
             <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?auto=format&fit=crop&w=1200&q=80" alt="Falafel und vegetarische Gerichte" />
-            <div class="gallery-overlay"><strong>Veggie / Falafel</strong><span>Auch vegetarische Gerichte sauber hervorgehoben.</span></div>
+            <div class="gallery-overlay">
+              <strong>Veggie / Falafel</strong>
+              <span>Auch vegetarische Gerichte sauber hervorgehoben.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -544,17 +802,20 @@
           </div>
           <p>Sie wirkt moderner, übersichtlicher und deutlich vertrauenswürdiger – vor allem mobil.</p>
         </div>
+
         <div class="info-grid">
           <article class="card info-card reveal">
             <div class="icon">01</div>
             <h3>Klarer Premium-Look</h3>
             <p>Helle Flächen, hochwertige Food-Fotos, weiche Schatten und warme Gold-Akzente statt überladener Standardoptik.</p>
           </article>
+
           <article class="card info-card reveal">
             <div class="icon">02</div>
             <h3>Saubere Speisekarte</h3>
             <p>Gerichte sind filterbar, durchsuchbar und direkt zum Warenkorb hinzufügbar. Das wirkt modern und spart Scroll-Chaos.</p>
           </article>
+
           <article class="card info-card reveal">
             <div class="icon">03</div>
             <h3>Bereit für Wachstum</h3>
@@ -569,29 +830,48 @@
         <div class="card contact-card reveal">
           <span class="eyebrow">Kontakt & Standort</span>
           <h3>City Döner Frechen</h3>
+
           <div class="contact-row"><span>Adresse</span><strong>Hauptstraße 135, 50226 Frechen</strong></div>
           <div class="contact-row"><span>Telefon 1</span><strong>0172 8787094</strong></div>
           <div class="contact-row"><span>Telefon 2</span><strong>017684060221</strong></div>
-          <div class="contact-row"><span>Öffnungszeiten</span>
+
+          <div class="contact-row">
+            <span>Öffnungszeiten</span>
             <ul class="hours">
               <li><strong>Montag–Sonntag</strong><span>11:00–22:00 Uhr</span></li>
             </ul>
           </div>
-          <div class="contact-row"><span>Lieferzeiten</span>
+
+          <div class="contact-row">
+            <span>Lieferzeiten</span>
             <ul class="hours">
               <li><strong>Mo.–Sa.</strong><span>11:30–21:30 Uhr</span></li>
               <li><strong>So.</strong><span>11:30–21:00 Uhr</span></li>
             </ul>
           </div>
+
           <div class="contact-row"><span>Lieferung</span><strong>ab 15,00 €</strong></div>
-          <div class="contact-row"><span>Instagram</span><strong>@citydoener_frechen</strong></div>
+
+          <div class="contact-row">
+            <span>Instagram</span>
+            <strong style="display:inline-flex;align-items:center;gap:8px">
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color:#d62976">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+              </svg>
+              @citydoener_frechen
+            </strong>
+          </div>
         </div>
+
         <div class="card map-card reveal">
           <iframe
             src="https://www.google.com/maps?q=Hauptstra%C3%9Fe%20135,%2050226%20Frechen&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Karte City Döner Frechen"></iframe>
+            title="Karte City Döner Frechen"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -600,10 +880,24 @@
   <footer>
     <div class="container footer-wrap">
       <p>© 2026 City Döner Frechen · Moderne Demo-Website für direkten Bestellfokus</p>
+
       <div class="footer-links">
         <a href="#menu">Speisekarte</a>
         <a href="#order">Bestellen</a>
         <a href="#contact">Kontakt</a>
+        <a
+          class="footer-social"
+          href="https://www.instagram.com/citydoener_frechen/"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color:#d62976">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+          </svg>
+          Instagram
+        </a>
       </div>
     </div>
   </footer>
@@ -681,47 +975,69 @@
     const stickyTotal = document.getElementById('stickyTotal');
     const successBox = document.getElementById('successBox');
     const errorBox = document.getElementById('errorBox');
+    const stickyBar = document.getElementById('stickyBar');
 
     let currentFilter = 'all';
 
     function euro(value){
       if(value === 0) return 'Preis auf Anfrage';
-      return value.toLocaleString('de-DE', {style:'currency', currency:'EUR'});
+      return value.toLocaleString('de-DE', { style:'currency', currency:'EUR' });
+    }
+
+    function escapeHtml(value){
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
     }
 
     function renderMenu(){
       const search = searchInput.value.trim().toLowerCase();
+
       const filtered = menuData.filter(item => {
         const matchesFilter = currentFilter === 'all' || item.category === currentFilter;
-        const haystack = `${item.name} ${item.desc} ${(item.tags||[]).join(' ')}`.toLowerCase();
+        const haystack = `${item.name} ${item.desc} ${(item.tags || []).join(' ')}`.toLowerCase();
         const matchesSearch = haystack.includes(search);
         return matchesFilter && matchesSearch;
       });
 
       menuList.innerHTML = '';
+
       filtered.forEach(item => {
         const row = document.createElement('article');
         row.className = 'menu-item';
+
+        const safeId = String(item.id).replace(/'/g, "\\'");
+        const safeName = escapeHtml(item.name);
+        const safeDesc = escapeHtml(item.desc);
+
         row.innerHTML = `
           <div class="menu-top">
             <div>
-              <h3>${item.id}. ${item.name}</h3>
-              <p class="menu-desc">${item.desc}</p>
+              <h3>${escapeHtml(String(item.id))}. ${safeName}</h3>
+              <p class="menu-desc">${safeDesc}</p>
             </div>
             <strong class="price">${euro(item.price)}</strong>
           </div>
-          <div class="menu-tags">${(item.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+          <div class="menu-tags">
+            ${(item.tags || []).map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}
+          </div>
           <div class="menu-actions">
             <div class="qty">
-              <button onclick="changeTempQty(this,-1)">−</button>
+              <button type="button" onclick="changeTempQty(this,-1)">−</button>
               <span class="qty-value">1</span>
-              <button onclick="changeTempQty(this,1)">+</button>
+              <button type="button" onclick="changeTempQty(this,1)">+</button>
             </div>
-            <button class="btn btn-primary" ${item.price === 0 ? 'disabled style="opacity:.6;cursor:not-allowed"' : `onclick="addToCart('${String(item.id).replace(/'/g, "\\'")}')"`}>
+            <button
+              class="btn btn-primary"
+              ${item.price === 0 ? 'disabled' : `onclick="addToCart('${safeId}')"`}>
               ${item.price === 0 ? 'Anfragen' : 'Hinzufügen'}
             </button>
           </div>
         `;
+
         menuList.appendChild(row);
       });
     }
@@ -736,15 +1052,24 @@
     function addToCart(id){
       const item = menuData.find(entry => String(entry.id) === String(id));
       if(!item || item.price === 0) return;
-      const card = [...document.querySelectorAll('.menu-item')].find(el => el.querySelector('h3').textContent.startsWith(`${item.id}.`));
+
+      const card = [...document.querySelectorAll('.menu-item')].find(el => {
+        const title = el.querySelector('h3');
+        return title && title.textContent.startsWith(`${item.id}.`);
+      });
+
+      if(!card) return;
+
       const qtyEl = card.querySelector('.qty-value');
       const qty = Number(qtyEl.textContent) || 1;
       const existing = cart.find(entry => String(entry.id) === String(item.id));
+
       if(existing){
         existing.qty += qty;
       } else {
-        cart.push({...item, qty});
+        cart.push({ ...item, qty });
       }
+
       qtyEl.textContent = 1;
       updateCart();
       showSuccess('Produkt zum Warenkorb hinzugefügt.');
@@ -752,23 +1077,26 @@
 
     function updateCart(){
       cartItems.innerHTML = '';
+
       const orderType = document.querySelector('input[name="orderType"]:checked').value;
+
       if(cart.length === 0){
         emptyBox.style.display = 'block';
       } else {
         emptyBox.style.display = 'none';
+
         cart.forEach((item, index) => {
           const row = document.createElement('div');
           row.className = 'cart-row';
           row.innerHTML = `
             <div>
-              <strong>${item.name}</strong>
+              <strong>${escapeHtml(item.name)}</strong>
               <div class="helper">${euro(item.price)} × ${item.qty}</div>
             </div>
             <div class="qty-cart">
-              <button onclick="changeCartQty(${index},-1)">−</button>
+              <button type="button" onclick="changeCartQty(${index},-1)">−</button>
               <strong>${item.qty}</strong>
-              <button onclick="changeCartQty(${index},1)">+</button>
+              <button type="button" onclick="changeCartQty(${index},1)">+</button>
             </div>
           `;
           cartItems.appendChild(row);
@@ -778,14 +1106,19 @@
       const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
       const deliveryFee = orderType === 'Lieferung' && subtotal > 0 ? DELIVERY_FEE : 0;
       const total = subtotal + deliveryFee;
+      const itemCount = cart.reduce((sum, item) => sum + item.qty, 0);
+
       subtotalEl.textContent = euro(subtotal);
       deliveryFeeEl.textContent = euro(deliveryFee);
       totalEl.textContent = euro(total);
-      stickyCount.textContent = `${cart.reduce((sum, item) => sum + item.qty, 0)} Artikel`;
+      stickyCount.textContent = `${itemCount} Artikel`;
       stickyTotal.textContent = `${euro(total)} gesamt`;
+
+      stickyBar.style.display = itemCount > 0 && window.innerWidth <= 780 ? 'block' : 'none';
     }
 
     function changeCartQty(index, change){
+      if(!cart[index]) return;
       cart[index].qty += change;
       if(cart[index].qty <= 0) cart.splice(index, 1);
       updateCart();
@@ -802,7 +1135,9 @@
       successBox.style.display = 'block';
       errorBox.style.display = 'none';
       clearTimeout(window.successTimeout);
-      window.successTimeout = setTimeout(()=> successBox.style.display = 'none', 2800);
+      window.successTimeout = setTimeout(() => {
+        successBox.style.display = 'none';
+      }, 2800);
     }
 
     function showError(message){
@@ -810,7 +1145,16 @@
       errorBox.style.display = 'block';
       successBox.style.display = 'none';
       clearTimeout(window.errorTimeout);
-      window.errorTimeout = setTimeout(()=> errorBox.style.display = 'none', 3200);
+      window.errorTimeout = setTimeout(() => {
+        errorBox.style.display = 'none';
+      }, 3200);
+    }
+
+    function updateOrderTypeStyles(){
+      document.querySelectorAll('.order-type label').forEach(label => {
+        const input = label.querySelector('input');
+        label.classList.toggle('active', input.checked);
+      });
     }
 
     function submitOrder(){
@@ -821,6 +1165,7 @@
       const time = document.getElementById('customerTime').value;
       const payment = document.getElementById('customerPayment').value;
       const orderType = document.querySelector('input[name="orderType"]:checked').value;
+
       const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
       const deliveryFee = orderType === 'Lieferung' && subtotal > 0 ? DELIVERY_FEE : 0;
       const total = subtotal + deliveryFee;
@@ -829,24 +1174,30 @@
         showError('Bitte Name, Telefonnummer und mindestens ein Produkt angeben.');
         return;
       }
+
       if(orderType === 'Lieferung' && !address){
         showError('Bitte bei Lieferung eine Adresse eintragen.');
         return;
       }
+
       if(orderType === 'Lieferung' && subtotal < DELIVERY_MIN){
         showError(`Lieferung laut Karte erst ab ${euro(DELIVERY_MIN)}.`);
         return;
       }
 
-      const itemsText = cart.map(item => `- ${item.qty}x ${item.name} (${euro(item.price * item.qty)})`).join('%0A');
-      const message = `Neue Bestellung für City Döner Frechen%0A%0A` +
+      const itemsText = cart
+        .map(item => `- ${item.qty}x ${item.name} (${euro(item.price * item.qty)})`)
+        .join('%0A');
+
+      const message =
+        `Neue Bestellung für City Döner Frechen%0A%0A` +
         `Name: ${encodeURIComponent(name)}%0A` +
         `Telefon: ${encodeURIComponent(phone)}%0A` +
         `Bestellart: ${encodeURIComponent(orderType)}%0A` +
-        `Adresse: ${encodeURIComponent(address || '-')}` + `%0A` +
+        `Adresse: ${encodeURIComponent(address || '-')}%0A` +
         `Uhrzeit: ${encodeURIComponent(time)}%0A` +
         `Zahlung: ${encodeURIComponent(payment)}%0A` +
-        `Anmerkung: ${encodeURIComponent(note || '-')}` + `%0A%0A` +
+        `Anmerkung: ${encodeURIComponent(note || '-')}%0A%0A` +
         `Produkte:%0A${itemsText}%0A%0A` +
         `Zwischensumme: ${encodeURIComponent(euro(subtotal))}%0A` +
         `Liefergebühr: ${encodeURIComponent(euro(deliveryFee))}%0A` +
@@ -857,6 +1208,7 @@
     }
 
     searchInput.addEventListener('input', renderMenu);
+
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -865,16 +1217,25 @@
         renderMenu();
       });
     });
-    document.querySelectorAll('input[name="orderType"]').forEach(radio => radio.addEventListener('change', updateCart));
+
+    document.querySelectorAll('input[name="orderType"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        updateOrderTypeStyles();
+        updateCart();
+      });
+    });
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, {threshold: 0.12});
+    }, { threshold: 0.12 });
+
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    window.addEventListener('resize', updateCart);
 
     renderMenu();
+    updateOrderTypeStyles();
     updateCart();
   </script>
 </body>
