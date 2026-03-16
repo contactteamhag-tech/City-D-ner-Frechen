@@ -3,38 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>City Döner Frechen – Döner, Pizza, Lahmacun & Schnitzel</title>
+
+  <title>City Döner Frechen – Döner, Pizza, Lahmacun, Pide & Schnitzel</title>
   <meta
     name="description"
-    content="City Döner Frechen in der Hauptstraße 135: Döner, Dürüm, Lahmacun, Pizza, Schnitzel und vegetarische Gerichte. Moderne Website mit integrierter Bestellanfrage für Abholung oder Lieferung."
+    content="City Döner Frechen in der Hauptstraße 135 – Döner, Dürüm, Lahmacun, Pide, Pizza, Schnitzel und vegetarische Gerichte. Jetzt Speisekarte ansehen und Bestellung per WhatsApp anfragen."
   />
-  <meta name="theme-color" content="#f6b300" />
+  <meta name="theme-color" content="#f5b400" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <style>
     :root{
-      --bg:#f8fafc;
+      --bg:#f8f9fc;
       --bg-soft:#ffffff;
       --bg-alt:#f1f5f9;
-      --card:rgba(255,255,255,.94);
-      --card-strong:rgba(255,255,255,.98);
+      --card:rgba(255,255,255,.95);
+      --card-strong:rgba(255,255,255,.99);
       --text:#0f172a;
       --muted:#5b6472;
-      --line:rgba(15,23,42,.10);
-      --line-strong:rgba(15,23,42,.16);
+      --line:rgba(15,23,42,.09);
+      --line-strong:rgba(15,23,42,.15);
       --accent:#f5b400;
-      --accent-2:#ffcf40;
-      --accent-dark:#7a5600;
+      --accent-2:#ffd451;
+      --accent-dark:#8a6200;
       --accent-red:#e24b2b;
       --success:#0f9f67;
       --shadow:0 24px 60px rgba(15,23,42,.10);
-      --shadow-soft:0 14px 35px rgba(15,23,42,.08);
+      --shadow-soft:0 12px 30px rgba(15,23,42,.08);
       --radius:28px;
       --radius-sm:18px;
       --max:1280px;
@@ -58,8 +59,14 @@
     button,input,select,textarea{font:inherit}
     .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
     .section{padding:92px 0}
-    .grid{display:grid;gap:20px}
+    .card{
+      background:linear-gradient(180deg,var(--card-strong),var(--card));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
 
+    .headline{font-family:'Playfair Display', serif;letter-spacing:-.02em}
     .eyebrow{
       display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;
       background:rgba(245,180,0,.12);color:#946700;border:1px solid rgba(245,180,0,.22);
@@ -69,16 +76,10 @@
       content:'';
       width:9px;height:9px;border-radius:999px;background:var(--accent)
     }
-
-    .headline{font-family:'Playfair Display', serif;letter-spacing:-.02em}
-
-    .section-head{
-      display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:36px
+    .pill{
+      padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);
+      font-size:.9rem;color:#334155
     }
-    .section-head h2{
-      font-size:clamp(2rem,4vw,3.4rem);line-height:1.02;max-width:700px
-    }
-    .section-head p{max-width:600px;color:var(--muted)}
 
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
@@ -86,7 +87,6 @@
       transition:.22s ease;white-space:nowrap;
     }
     .btn:hover{transform:translateY(-1px)}
-    .btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
     .btn-primary{
       background:linear-gradient(135deg,var(--accent),var(--accent-2));
       color:#1a1a1a;box-shadow:0 16px 36px rgba(245,180,0,.28)
@@ -94,78 +94,61 @@
     .btn-secondary{
       background:#fff;border:1px solid var(--line-strong);color:var(--text);box-shadow:var(--shadow-soft)
     }
-    .btn-dark{background:#111827;color:#fff}
 
-    .pill{
-      padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem;color:#334155
+    .section-head{
+      display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:34px
     }
-
-    .card{
-      background:linear-gradient(180deg,var(--card-strong),var(--card));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-
-    .icon-inline{
-      width:18px;height:18px;display:inline-block;vertical-align:middle;flex:0 0 18px
-    }
+    .section-head h2{font-size:clamp(2rem,4vw,3.35rem);line-height:1.02;max-width:760px}
+    .section-head p{max-width:640px;color:var(--muted)}
 
     header{
-      position:sticky;top:0;z-index:60;
+      position:sticky;top:0;z-index:70;
       backdrop-filter:blur(18px);
-      background:rgba(255,255,255,.78);
+      background:rgba(255,255,255,.82);
       border-bottom:1px solid rgba(15,23,42,.06);
     }
-
     .nav{
-      display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:80px;
+      display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:82px;
     }
-
     .brand{display:flex;align-items:center;gap:14px}
     .brand-mark{
-      width:52px;height:52px;border-radius:16px;display:grid;place-items:center;
+      width:54px;height:54px;border-radius:18px;display:grid;place-items:center;
       background:linear-gradient(135deg,#1f2937,#0f172a);color:var(--accent-2);
       font-weight:900;box-shadow:0 12px 30px rgba(15,23,42,.18)
     }
     .brand-copy strong{display:block;font-size:1rem;line-height:1}
     .brand-copy span{display:block;color:var(--muted);font-size:.82rem;margin-top:4px}
-
     .nav-links{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
     .nav-links a{font-weight:700;color:#334155;font-size:.95rem}
-
     .nav-actions{display:flex;align-items:center;gap:12px}
-    .social-btn svg{color:#d62976}
+
+    .icon-inline{width:18px;height:18px;display:inline-block;vertical-align:middle;flex:0 0 18px}
 
     .hero{padding:34px 0 18px}
-    .hero-layout{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:stretch}
-
+    .hero-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}
     .hero-main{
       min-height:680px;padding:34px;position:relative;overflow:hidden;
       background:
-        linear-gradient(120deg, rgba(255,255,255,.86), rgba(255,255,255,.54)),
-        radial-gradient(circle at right top, rgba(245,180,0,.22), transparent 30%),
-        url('https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+        linear-gradient(120deg, rgba(255,255,255,.88), rgba(255,255,255,.56)),
+        radial-gradient(circle at right top, rgba(245,180,0,.20), transparent 28%),
+        url('https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     }
     .hero-main::before{
-      content:'';
-      position:absolute;inset:auto -80px -80px auto;width:280px;height:280px;border-radius:50%;
+      content:'';position:absolute;inset:auto -80px -80px auto;width:280px;height:280px;border-radius:50%;
       background:radial-gradient(circle, rgba(226,75,43,.18), transparent 70%);
     }
-
     .hero-copy{position:relative;z-index:2;max-width:760px}
     .hero-copy h1{
-      font-size:clamp(2.8rem,6.8vw,5.8rem);
-      line-height:.92;margin:18px 0 16px;letter-spacing:-.05em
+      font-size:clamp(2.8rem,6.6vw,5.6rem);
+      line-height:.93;margin:18px 0 16px;letter-spacing:-.05em
     }
-    .hero-copy p{font-size:1.05rem;max-width:640px;color:#334155}
+    .hero-copy p{font-size:1.05rem;max-width:650px;color:#334155}
     .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
     .hero-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
     .hero-note-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
     .hero-badges{display:flex;gap:10px;flex-wrap:wrap}
-
     .stat{
-      min-width:155px;padding:18px;border-radius:22px;background:rgba(255,255,255,.76);
+      min-width:160px;padding:18px;border-radius:22px;background:rgba(255,255,255,.78);
       border:1px solid rgba(15,23,42,.08);box-shadow:var(--shadow-soft)
     }
     .stat strong{display:block;font-size:1.5rem;line-height:1.05}
@@ -173,28 +156,31 @@
 
     .hero-side{display:grid;gap:18px}
     .side-card{padding:24px}
-    .side-card h3{font-size:1.24rem;margin-bottom:12px}
-    .top-sellers{display:grid;gap:12px}
+    .side-card h3{font-size:1.22rem;margin-bottom:12px}
     .mini-row,.summary-row,.cart-row{
       display:flex;justify-content:space-between;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(15,23,42,.07)
     }
     .mini-row:last-child,.summary-row:last-child,.cart-row:last-child{border-bottom:none}
     .price{font-weight:900;color:#a56f00}
+    .top-sellers{display:grid;gap:10px}
 
-    .top-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .top-card{
-      padding:12px;background:#fff;border:1px solid var(--line);
-      border-radius:22px;box-shadow:var(--shadow-soft)
+    .highlights-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:18px
     }
-    .top-card img{height:180px;width:100%;object-fit:cover;border-radius:16px}
-    .top-card h4{margin:14px 0 6px;font-size:1.05rem}
-    .top-card p{color:var(--muted);font-size:.92rem;min-height:44px}
+    .highlight-card{
+      padding:12px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-soft)
+    }
+    .highlight-card img{
+      width:100%;height:180px;object-fit:cover;border-radius:16px
+    }
+    .highlight-card h4{margin:14px 0 6px;font-size:1.06rem}
+    .highlight-card p{color:var(--muted);font-size:.93rem;min-height:46px}
 
-    .story-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:center}
+    .story-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px;align-items:center}
     .story-photo{
       min-height:560px;border-radius:var(--radius);
       background:
-        linear-gradient(135deg, rgba(255,255,255,.26), rgba(255,255,255,.10)),
+        linear-gradient(135deg, rgba(255,255,255,.28), rgba(255,255,255,.10)),
         url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
       border:1px solid var(--line);box-shadow:var(--shadow)
     }
@@ -205,37 +191,42 @@
     .story-points li{
       display:flex;gap:12px;align-items:flex-start;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:18px
     }
-    .story-points b{display:block;margin-bottom:4px}
     .check{
       width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;border-radius:999px;
       background:rgba(15,159,103,.12);color:var(--success);font-weight:900;margin-top:2px
     }
 
-    .menu-wrap{display:grid;grid-template-columns:1fr;gap:22px;align-items:start}
     .menu-panel{padding:28px}
     .menu-search{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
     .search-input{
-      flex:1;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;color:var(--text)
+      flex:1;min-width:220px;background:#fff;border:1px solid var(--line);
+      border-radius:16px;padding:14px 16px;color:var(--text)
     }
-
     .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
     .tab-btn{
-      border:1px solid var(--line);background:#fff;color:#334155;cursor:pointer;border-radius:999px;padding:11px 16px;font-weight:800
+      border:1px solid var(--line);background:#fff;color:#334155;cursor:pointer;
+      border-radius:999px;padding:11px 16px;font-weight:800
     }
     .tab-btn.active{
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#111;border-color:transparent
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#111;border-color:transparent
     }
 
-    .menu-list{display:grid;gap:14px}
+    .menu-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
     .menu-item{
-      background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;display:grid;gap:10px
+      background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;display:grid;gap:10px;height:100%
     }
     .menu-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
-    .menu-top h3{font-size:1.08rem;line-height:1.15}
-    .menu-desc{color:var(--muted);font-size:.95rem}
+    .menu-top h3{font-size:1.04rem;line-height:1.15}
+    .menu-desc{color:var(--muted);font-size:.93rem}
     .menu-tags{display:flex;gap:8px;flex-wrap:wrap}
     .tag{
-      padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:.8rem;color:#475569
+      padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);
+      font-size:.8rem;color:#475569
     }
     .menu-actions{
       display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap
@@ -248,55 +239,43 @@
     }
     .qty-value{min-width:24px;text-align:center;font-weight:900}
 
-    .order-integrated{
-      margin-top:20px;
-      padding:30px;
-      position:relative;
-      overflow:hidden;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.92)),
-        radial-gradient(circle at top right, rgba(245,180,0,.14), transparent 28%);
+    .order-inline-wrap{
+      margin-top:26px;
+      padding-top:26px;
+      border-top:1px solid rgba(15,23,42,.08);
     }
-    .order-integrated::before{
-      content:'';
-      position:absolute;top:-90px;right:-90px;width:240px;height:240px;border-radius:50%;
-      background:radial-gradient(circle, rgba(245,180,0,.18), transparent 70%);
-      pointer-events:none;
+    .order-inline-head{
+      display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:18px
+    }
+    .order-inline-head h3{font-size:1.5rem;margin:12px 0 8px}
+    .order-inline-head p{color:var(--muted);max-width:740px}
+    .order-inline-badges{display:flex;gap:10px;flex-wrap:wrap}
+
+    .order-inline-grid{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start
     }
 
-    .order-intro{
-      display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;
-      margin-bottom:22px;position:relative;z-index:1
-    }
-    .order-intro h3{font-size:1.5rem;margin-top:12px}
-    .order-intro p{color:var(--muted);max-width:760px}
-
-    .order-shell{
-      display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:start;position:relative;z-index:1
-    }
     .checkout-pane,.cart-pane{
-      background:rgba(255,255,255,.76);
-      border:1px solid rgba(255,255,255,.7);
-      border-radius:22px;padding:20px;backdrop-filter:blur(10px)
+      background:rgba(255,255,255,.78);
+      border:1px solid rgba(15,23,42,.08);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:var(--shadow-soft);
     }
-
     .checkout-head,.cart-head{
       display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:10px
     }
     .checkout-head h4,.cart-head h4{font-size:1.12rem}
     .checkout-head p,.cart-head p{color:var(--muted);font-size:.92rem;max-width:420px}
-
     .cart-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-
     .order-type{
       display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0
     }
     .order-type label{
-      display:flex;gap:10px;align-items:center;justify-content:center;padding:15px 16px;
-      border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.86);
-      font-weight:800;box-shadow:var(--shadow-soft);cursor:pointer;transition:.2s ease
+      display:flex;gap:10px;align-items:center;justify-content:center;padding:15px 16px;border:1px solid var(--line);
+      border-radius:18px;background:rgba(255,255,255,.86);font-weight:800;
+      box-shadow:var(--shadow-soft);cursor:pointer;transition:.2s ease
     }
-    .order-type label:hover{transform:translateY(-1px)}
     .order-type label.active{
       background:linear-gradient(135deg, rgba(245,180,0,.16), rgba(255,255,255,.95));
       border-color:rgba(245,180,0,.35);color:#7a5600
@@ -312,11 +291,7 @@
     .field-group label:nth-child(5){grid-column:span 6}
     .field-group label:nth-child(3),
     .field-group label:nth-child(6){grid-column:1/-1}
-
-    .input-label{
-      font-size:.84rem;font-weight:800;letter-spacing:.01em;color:#334155
-    }
-
+    .input-label{font-size:.84rem;font-weight:800;letter-spacing:.01em;color:#334155}
     .field,.select,.textarea{
       width:100%;margin-top:8px;padding:15px 16px;border-radius:16px;border:1px solid var(--line);
       background:rgba(255,255,255,.96);color:var(--text);outline:none;
@@ -331,25 +306,15 @@
     .empty-box{
       padding:16px;border-radius:18px;border:1px dashed var(--line-strong);color:var(--muted);background:#fff;margin-top:16px
     }
-
     .summary{padding-top:12px;border-top:1px solid rgba(15,23,42,.08);margin-top:10px}
     .summary .total strong,.summary .total span{font-size:1.2rem}
-
-    .submit-row{
-      display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px
-    }
-
+    .submit-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
     .helper{font-size:.88rem;color:var(--muted)}
-
     .success,.error{
       margin-top:14px;padding:14px 16px;border-radius:16px;display:none;font-size:.95rem
     }
-    .success{
-      background:rgba(15,159,103,.10);border:1px solid rgba(15,159,103,.22);color:#0b7f52
-    }
-    .error{
-      background:rgba(226,75,43,.10);border:1px solid rgba(226,75,43,.22);color:#a5351f
-    }
+    .success{background:rgba(15,159,103,.10);border:1px solid rgba(15,159,103,.22);color:#0b7f52}
+    .error{background:rgba(226,75,43,.10);border:1px solid rgba(226,75,43,.22);color:#a5351f}
 
     .gallery-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:18px}
     .gallery-card{
@@ -358,7 +323,7 @@
     .gallery-card img{width:100%;height:100%;object-fit:cover}
     .gallery-card.large{min-height:540px}
     .gallery-overlay{
-      position:absolute;inset:auto 16px 16px 16px;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);
+      position:absolute;inset:auto 16px 16px 16px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
       border:1px solid rgba(255,255,255,.6);border-radius:18px;padding:14px 16px
     }
     .gallery-overlay strong{display:block;font-size:1rem}
@@ -388,37 +353,31 @@
     .map-card iframe{width:100%;height:100%;border:0}
 
     footer{padding:22px 0 42px;border-top:1px solid rgba(15,23,42,.06)}
-    .footer-wrap{
-      display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap
-    }
+    .footer-wrap{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
     .footer-wrap p{color:var(--muted)}
     .footer-links{display:flex;gap:18px;flex-wrap:wrap;color:#334155}
-    .footer-social{
-      display:inline-flex;align-items:center;gap:8px;font-weight:700
-    }
 
     .sticky-bar{
-      position:fixed;left:16px;right:16px;bottom:16px;z-index:55;display:none;
-      background:rgba(255,255,255,.92);backdrop-filter:blur(14px);
+      position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none;
+      background:rgba(255,255,255,.94);backdrop-filter:blur(14px);
       border:1px solid var(--line-strong);border-radius:22px;padding:14px;box-shadow:var(--shadow)
     }
     .sticky-inner{display:flex;justify-content:space-between;gap:12px;align-items:center}
 
-    .reveal{
-      opacity:0;transform:translateY(22px);transition:opacity .55s ease, transform .55s ease
-    }
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease, transform .55s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
 
     @media (max-width:1120px){
       .hero-layout,.story-layout,.contact-layout{grid-template-columns:1fr}
-      .top-grid,.gallery-grid,.info-grid,.order-shell{grid-template-columns:1fr 1fr}
+      .highlights-grid,.gallery-grid,.info-grid{grid-template-columns:1fr 1fr}
+      .menu-list,.order-inline-grid{grid-template-columns:1fr}
     }
 
     @media (max-width:780px){
       .nav-links{display:none}
       .nav-actions .btn-secondary{display:none}
       .hero-main{min-height:unset;padding:26px}
-      .field-group,.top-grid,.gallery-grid,.info-grid,.order-shell,.order-type,.submit-row{grid-template-columns:1fr}
+      .field-group,.highlights-grid,.gallery-grid,.info-grid,.submit-row,.order-type{grid-template-columns:1fr}
       .field-group label:nth-child(1),
       .field-group label:nth-child(2),
       .field-group label:nth-child(4),
@@ -442,14 +401,14 @@
 
       <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="#menu">Speisekarte</a>
-        <a href="#bestseller">Bestseller</a>
+        <a href="#highlights">Highlights</a>
         <a href="#gallery">Galerie</a>
         <a href="#order">Bestellen</a>
         <a href="#contact">Kontakt</a>
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-secondary social-btn" href="https://www.instagram.com/citydoener_frechen/" target="_blank" rel="noopener" aria-label="Instagram von City Döner Frechen">
+        <a class="btn btn-secondary" href="https://www.instagram.com/citydoener_frechen/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg class="icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
             <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
@@ -468,34 +427,32 @@
         <div class="hero-main card reveal">
           <div class="hero-copy">
             <div class="hero-badges">
-              <span class="eyebrow">Neu in Frechen · Halal Food</span>
+              <span class="eyebrow">Halal Food in Frechen</span>
               <span class="pill">Hauptstraße 135</span>
-              <span class="pill">Täglich 11:00–22:00</span>
+              <span class="pill">Mo–So 11:00–22:00</span>
             </div>
 
-            <h1 class="headline">City Döner Frechen.<br>Modern, direkt, appetitlich.</h1>
+            <h1 class="headline">City Döner Frechen.<br>Frisch, klar, direkt bestellbar.</h1>
 
             <p>
-              Eine helle Premium-Website für City Döner Frechen mit markanter Optik, klarer Speisekarte
-              und eigener Bestellanfrage. Die Seite verbindet modernes Fast-Casual-Design mit einer
-              luxuriösen, aufgeräumten Struktur.
+              Döner, Dürüm, Lahmacun, Pide, Pizza, Schnitzel und vegetarische Gerichte –
+              alles sauber aufbereitet in einer modernen, übersichtlichen Website mit direkter Bestellanfrage per WhatsApp.
             </p>
 
             <div class="hero-actions">
               <a class="btn btn-primary" href="#menu">Speisekarte ansehen</a>
-              <a class="btn btn-secondary" href="#order">Online anfragen</a>
+              <a class="btn btn-secondary" href="#order">Bestellung starten</a>
             </div>
 
             <div class="hero-stats">
               <div class="stat"><strong>42</strong><span>Gerichte auf der Karte</span></div>
               <div class="stat"><strong>15 €</strong><span>Lieferung ab Mindestwert</span></div>
-              <div class="stat"><strong>2</strong><span>Telefonnummern für Kontakt</span></div>
+              <div class="stat"><strong>7 Tage</strong><span>Geöffnet für Frechen</span></div>
             </div>
 
             <div class="hero-note-row">
               <span class="pill">Döner</span>
-              <span class="pill">Dürüm</span>
-              <span class="pill">Lahmacun</span>
+              <span class="pill">Lahmacun / Pide</span>
               <span class="pill">Pizza</span>
               <span class="pill">Schnitzel</span>
               <span class="pill">Veggie</span>
@@ -505,68 +462,68 @@
 
         <aside class="hero-side reveal">
           <div class="card side-card">
-            <h3>Direkt Eindruck machen</h3>
+            <h3>Beliebt bei City Döner</h3>
             <div class="top-sellers">
               <div class="mini-row"><span>Döner Tasche</span><strong class="price">7,00 €</strong></div>
               <div class="mini-row"><span>Jumbo Döner</span><strong class="price">9,90 €</strong></div>
-              <div class="mini-row"><span>Döner Dürüm</span><strong class="price">8,50 €</strong></div>
               <div class="mini-row"><span>Pizza Döner</span><strong class="price">11,50 €</strong></div>
+              <div class="mini-row"><span>Rahm Schnitzel</span><strong class="price">14,50 €</strong></div>
             </div>
           </div>
 
           <div class="card side-card">
-            <h3>Perfekt für dein eigenes System</h3>
+            <h3>Lieferung & Abholung</h3>
             <p style="color:var(--muted)">
-              Die Seite ist so gebaut, dass du später Stripe, SumUp oder eine eigene Checkout-Lösung ergänzen kannst.
-              Vorher läuft die Bestellung sauber als Anfrage per WhatsApp oder E-Mail.
+              Bestelle bequem zur Abholung oder als Lieferung. Die Lieferung startet ab 15,00 €,
+              die Anfrage wird direkt per WhatsApp vorbereitet.
             </p>
           </div>
 
           <div class="card side-card">
-            <h3>Kontakt auf einen Blick</h3>
+            <h3>Kontakt & Zeiten</h3>
             <div class="top-sellers">
               <div class="mini-row"><span>Telefon 1</span><strong>0172 8787094</strong></div>
               <div class="mini-row"><span>Telefon 2</span><strong>017684060221</strong></div>
-              <div class="mini-row"><span>Lieferzeit</span><strong>Mo–Sa 11:30–21:30</strong></div>
-              <div class="mini-row"><span>Sonntag</span><strong>11:30–21:00</strong></div>
+              <div class="mini-row"><span>Öffnungszeiten</span><strong>11:00–22:00</strong></div>
+              <div class="mini-row"><span>Lieferzeiten</span><strong>Mo–Sa 11:30–21:30</strong></div>
             </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="bestseller">
+    <section class="section" id="highlights">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow">Bestseller</span>
-            <h2 class="headline">Starke Produkte, die direkt Lust auf Bestellung machen</h2>
+            <span class="eyebrow">Highlights</span>
+            <h2 class="headline">Starke Gerichte, die auf den ersten Blick überzeugen</h2>
           </div>
           <p>
-            Große Produktkarten, saubere Typografie und hochwertigere Bildsprache als bei typischen Imbissseiten.
+            Klare Präsentation, starke Bestseller und eine Speisekarte, die direkt zum Bestellen führt.
           </p>
         </div>
 
-        <div class="top-grid">
-          <article class="top-card reveal">
-            <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=1200&q=80" alt="Premium Döner im Brot" />
+        <div class="highlights-grid">
+          <article class="highlight-card reveal">
+            <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=1200&q=80" alt="Döner im Brot" />
             <h4>Döner Tasche</h4>
-            <p>Kalb- oder Hähnchenfleisch im Fladenbrot mit Salat und Sauce.</p>
+            <p>Kalb- oder Hähnchenfleisch im Fladenbrot mit Salat und hausgemachter Sauce.</p>
             <strong class="price">7,00 €</strong>
           </article>
 
-          <article class="top-card reveal">
+          <article class="highlight-card reveal">
             <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80" alt="Pizza frisch aus dem Ofen" />
             <h4>Pizza Döner</h4>
-            <p>Mit Kalb- oder Hähnchenfleisch, modern inszeniert für die Website.</p>
+            <p>30 cm Pizza mit Döner Kalb oder Hähnchen – einer der klaren Klassiker auf der Karte.</p>
             <strong class="price">11,50 €</strong>
           </article>
 
-          <article class="top-card reveal">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=80" alt="Dürüm und Falafel Teller" />
-            <h4>Döner Dürüm</h4>
-            <p>Ideal als schneller Bestseller für mobile Bestellungen und Abholung.</p>
-            <strong class="price">8,50 €</strong>
+          <article class="highlight-card reveal">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Schnitzel mit Pommes" />
+            <h4>Rahm Schnitzel</h4>
+            <p>Mit Hollandaise und Käse überbacken, dazu Salat sowie Pommes oder Reis.</p>
+            <strong class="price">14,50 €</strong>
           </article>
         </div>
       </div>
@@ -577,25 +534,25 @@
         <div class="story-photo reveal" aria-label="Mood-Bild für City Döner Frechen"></div>
 
         <div class="story-card card reveal">
-          <span class="eyebrow">Über den Standort</span>
-          <h2 class="headline">Ein moderner Auftritt für einen neuen Döner-Standort in Frechen</h2>
+          <span class="eyebrow">Warum diese Seite funktioniert</span>
+          <h2 class="headline">Modernes Auftreten für einen Imbiss, der direkt Vertrauen aufbauen soll</h2>
           <p>
-            Diese Version setzt auf einen hellen, hochwertigen Look statt auf das übliche dunkle Standard-Imbissdesign.
-            Dadurch wirkt City Döner Frechen frischer, seriöser und moderner – gerade auf dem Smartphone.
+            Die Seite ist bewusst heller, hochwertiger und klarer aufgebaut als typische Standard-Imbissseiten.
+            Kunden sehen sofort Speisekarte, Preise, Öffnungszeiten, Lieferinformationen und Kontakt.
           </p>
 
           <ul class="story-points">
             <li>
               <div class="check">✓</div>
-              <div><b>Luxuriös und trotzdem einfach</b> Klare Navigation, sanfte Schatten, goldene Akzente und eine starke Food-Präsentation.</div>
+              <div><strong>Sauber strukturierte Speisekarte</strong><br>Alle Gerichte sind filterbar, durchsuchbar und direkt bestellbar.</div>
             </li>
             <li>
               <div class="check">✓</div>
-              <div><b>Alle wichtigen Daten sofort sichtbar</b> Adresse, Telefonnummern, Öffnungszeiten, Lieferinfo und Speisekarte ohne langes Suchen.</div>
+              <div><strong>Bestellung direkt unter der Karte</strong><br>Keine unnötige Lücke, kein billiger Formularblock, sondern integriert in den Flow.</div>
             </li>
             <li>
               <div class="check">✓</div>
-              <div><b>Bereit für spätere Zahlung</b> Bestellanfrage jetzt schon funktionsfähig, Online-Zahlung später über Stripe oder SumUp ergänzbar.</div>
+              <div><strong>Perfekt für späteren Checkout</strong><br>WhatsApp funktioniert sofort, Stripe oder SumUp kann später ergänzt werden.</div>
             </li>
           </ul>
         </div>
@@ -607,145 +564,133 @@
         <div class="section-head reveal">
           <div>
             <span class="eyebrow">Komplette Speisekarte</span>
-            <h2 class="headline">Alle Preise sauber strukturiert – modern statt überladen</h2>
+            <h2 class="headline">Alle Gerichte von City Döner Frechen übersichtlich aufbereitet</h2>
           </div>
           <p>
-            Die Karte basiert auf deiner eingesendeten Preisübersicht. Du kannst später jederzeit Produkte,
-            Beschreibungen oder Bilder austauschen.
+            Döner, Lahmacun, Pide, Pizza, Schnitzel und vegetarische Gerichte – mit echter Preisstruktur aus der eingesendeten Speisekarte.
           </p>
         </div>
 
-        <div class="menu-wrap">
-          <div class="card menu-panel reveal">
-            <div class="menu-search">
-              <input
-                id="menuSearch"
-                class="search-input"
-                type="text"
-                placeholder="Gericht suchen, z. B. Döner, Pizza, Falafel ..."
-              />
-            </div>
+        <div class="card menu-panel reveal">
+          <div class="menu-search">
+            <input id="menuSearch" class="search-input" type="text" placeholder="Gericht suchen, z. B. Döner, Pizza, Falafel ..." />
+          </div>
 
-            <div class="tabs">
-              <button class="tab-btn active" data-filter="all">Alle</button>
-              <button class="tab-btn" data-filter="doener">Döner</button>
-              <button class="tab-btn" data-filter="lahmacun">Lahmacun / Pide</button>
-              <button class="tab-btn" data-filter="pizza">Pizza</button>
-              <button class="tab-btn" data-filter="schnitzel">Schnitzel</button>
-              <button class="tab-btn" data-filter="veggie">Veggie</button>
-            </div>
+          <div class="tabs">
+            <button class="tab-btn active" data-filter="all">Alle</button>
+            <button class="tab-btn" data-filter="doener">Döner</button>
+            <button class="tab-btn" data-filter="lahmacun">Lahmacun / Pide</button>
+            <button class="tab-btn" data-filter="pizza">Pizza</button>
+            <button class="tab-btn" data-filter="schnitzel">Schnitzel</button>
+            <button class="tab-btn" data-filter="veggie">Veggie</button>
+          </div>
 
-            <div class="menu-list" id="menuList"></div>
+          <div class="menu-list" id="menuList"></div>
 
-            <div class="card order-integrated reveal" id="order">
-              <div class="order-intro">
-                <div>
-                  <span class="eyebrow">Bestellanfrage direkt unter der Karte</span>
-                  <h3>Waagerecht integriert und deutlich hochwertiger eingebunden</h3>
-                  <p>
-                    Der Bestellbereich sitzt jetzt direkt unter der Speisekarte und wirkt wie ein natürlicher,
-                    moderner Teil der Seite – nicht wie ein billiger, separater Formularblock.
-                  </p>
-                </div>
+          <div class="order-inline-wrap" id="order">
+            <div class="order-inline-head">
+              <div>
+                <span class="eyebrow">Bestellanfrage</span>
+                <h3>Direkt unter der Speisekarte integriert</h3>
+                <p>
+                  Abholung oder Lieferung auswählen, Kontaktdaten eintragen und die Bestellung direkt per WhatsApp senden.
+                </p>
+              </div>
+              <div class="order-inline-badges">
                 <span class="pill">Lieferung ab 15,00 €</span>
+                <span class="pill">WhatsApp-Bestellung</span>
+              </div>
+            </div>
+
+            <div class="order-inline-grid">
+              <div class="checkout-pane">
+                <div class="checkout-head" style="margin-bottom:16px">
+                  <div>
+                    <h4>Deine Angaben</h4>
+                    <p>Einfach, schnell und direkt auf dem Smartphone nutzbar.</p>
+                  </div>
+                </div>
+
+                <div class="order-type" id="orderTypeWrap">
+                  <label class="active"><input type="radio" name="orderType" value="Abholung" checked> Abholung</label>
+                  <label><input type="radio" name="orderType" value="Lieferung"> Lieferung</label>
+                </div>
+
+                <div class="field-group">
+                  <label>
+                    <span class="input-label">Name</span>
+                    <input id="customerName" class="field" type="text" placeholder="Max Mustermann" />
+                  </label>
+
+                  <label>
+                    <span class="input-label">Telefon</span>
+                    <input id="customerPhone" class="field" type="tel" placeholder="0176 12345678" />
+                  </label>
+
+                  <label class="full">
+                    <span class="input-label">Adresse</span>
+                    <input id="customerAddress" class="field" type="text" placeholder="Nur bei Lieferung: Straße, Hausnummer, Ort" />
+                  </label>
+
+                  <label>
+                    <span class="input-label">Uhrzeit</span>
+                    <select id="customerTime" class="select">
+                      <option>Schnellstmöglich</option>
+                      <option>In 15 Minuten</option>
+                      <option>In 30 Minuten</option>
+                      <option>In 45 Minuten</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    <span class="input-label">Zahlung</span>
+                    <select id="customerPayment" class="select">
+                      <option>Bar</option>
+                      <option>Karte vor Ort</option>
+                      <option>Online später integrieren</option>
+                    </select>
+                  </label>
+
+                  <label class="full">
+                    <span class="input-label">Anmerkung</span>
+                    <textarea id="customerNote" class="textarea" placeholder="z. B. ohne Zwiebeln, extra scharf"></textarea>
+                  </label>
+                </div>
+
+                <div class="success" id="successBox"></div>
+                <div class="error" id="errorBox"></div>
               </div>
 
-              <div class="order-shell">
-                <div class="checkout-pane">
-                  <div class="checkout-head" style="margin-bottom:16px">
-                    <div>
-                      <h4>Deine Angaben</h4>
-                      <p>Abholung oder Lieferung auswählen und Kontaktdaten eintragen.</p>
-                    </div>
+              <div class="cart-pane">
+                <div class="cart-head">
+                  <div>
+                    <h4>Dein Warenkorb</h4>
+                    <p>Direkt in die Seite integriert und ohne visuelle Brüche.</p>
                   </div>
-
-                  <div class="order-type" id="orderTypeWrap">
-                    <label class="active"><input type="radio" name="orderType" value="Abholung" checked> Abholung</label>
-                    <label><input type="radio" name="orderType" value="Lieferung"> Lieferung</label>
-                  </div>
-
-                  <div class="field-group">
-                    <label>
-                      <span class="input-label">Name</span>
-                      <input id="customerName" class="field" type="text" placeholder="Max Mustermann" />
-                    </label>
-
-                    <label>
-                      <span class="input-label">Telefon</span>
-                      <input id="customerPhone" class="field" type="tel" placeholder="0176 12345678" />
-                    </label>
-
-                    <label class="full">
-                      <span class="input-label">Adresse</span>
-                      <input id="customerAddress" class="field" type="text" placeholder="Nur bei Lieferung: Straße, Hausnummer, Ort" />
-                    </label>
-
-                    <label>
-                      <span class="input-label">Uhrzeit</span>
-                      <select id="customerTime" class="select">
-                        <option>Schnellstmöglich</option>
-                        <option>In 15 Minuten</option>
-                        <option>In 30 Minuten</option>
-                        <option>In 45 Minuten</option>
-                      </select>
-                    </label>
-
-                    <label>
-                      <span class="input-label">Zahlung</span>
-                      <select id="customerPayment" class="select">
-                        <option>Bar</option>
-                        <option>Karte vor Ort</option>
-                        <option>Online später integrieren</option>
-                      </select>
-                    </label>
-
-                    <label class="full">
-                      <span class="input-label">Anmerkung</span>
-                      <textarea id="customerNote" class="textarea" placeholder="z. B. ohne Zwiebeln, extra scharf"></textarea>
-                    </label>
-                  </div>
-
-                  <div class="success" id="successBox"></div>
-                  <div class="error" id="errorBox"></div>
                 </div>
 
-                <div class="cart-pane">
-                  <div class="cart-head">
-                    <div>
-                      <h4>Dein Warenkorb</h4>
-                      <p>Direkt in die Seite eingebettet und optisch aufgewertet.</p>
-                    </div>
-                  </div>
-
-                  <div class="cart-badges">
-                    <span class="pill">Abholung & Lieferung</span>
-                    <span class="pill">WhatsApp-Order</span>
-                    <span class="pill">Direkt integriert</span>
-                  </div>
-
-                  <div class="cart-items" id="cartItems"></div>
-                  <div class="empty-box" id="emptyBox">Noch nichts im Warenkorb.</div>
-
-                  <div class="summary">
-                    <div class="summary-row"><span>Zwischensumme</span><strong id="subtotal">0,00 €</strong></div>
-                    <div class="summary-row"><span>Liefergebühr</span><strong id="deliveryFee">0,00 €</strong></div>
-                    <div class="summary-row total"><span>Gesamt</span><strong id="total">0,00 €</strong></div>
-                  </div>
-
-                  <div class="submit-row">
-                    <button class="btn btn-primary" onclick="submitOrder()">
-                      <svg class="icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M4 20L20 12L4 4L6.5 10.5L14 12L6.5 13.5L4 20Z" fill="currentColor"/>
-                      </svg>
-                      Per WhatsApp senden
-                    </button>
-                    <button class="btn btn-secondary" onclick="clearCart()">Leeren</button>
-                  </div>
-
-                  <p class="helper" style="margin-top:12px">
-                    Stripe oder SumUp kann später als echter Checkout direkt an dieser Stelle ergänzt werden.
-                  </p>
+                <div class="cart-badges">
+                  <span class="pill">Abholung & Lieferung</span>
+                  <span class="pill">Modern integriert</span>
                 </div>
+
+                <div class="cart-items" id="cartItems"></div>
+                <div class="empty-box" id="emptyBox">Noch nichts im Warenkorb.</div>
+
+                <div class="summary">
+                  <div class="summary-row"><span>Zwischensumme</span><strong id="subtotal">0,00 €</strong></div>
+                  <div class="summary-row"><span>Liefergebühr</span><strong id="deliveryFee">0,00 €</strong></div>
+                  <div class="summary-row total"><span>Gesamt</span><strong id="total">0,00 €</strong></div>
+                </div>
+
+                <div class="submit-row">
+                  <button class="btn btn-primary" onclick="submitOrder()">Per WhatsApp senden</button>
+                  <button class="btn btn-secondary" onclick="clearCart()">Leeren</button>
+                </div>
+
+                <p class="helper" style="margin-top:12px">
+                  Ein echter Online-Checkout kann später direkt an dieser Stelle ergänzt werden.
+                </p>
               </div>
             </div>
           </div>
@@ -758,35 +703,35 @@
         <div class="section-head reveal">
           <div>
             <span class="eyebrow">Food-Galerie</span>
-            <h2 class="headline">Hochwertige Bildsprache für deutlich mehr Appetit und Vertrauen</h2>
+            <h2 class="headline">Starke Bilder für mehr Appetit, Vertrauen und Wiedererkennung</h2>
           </div>
           <p>
-            Diese Bilder sind hochwertige Platzhalter. Für die finale Version solltest du echte Fotos von City Döner Frechen ergänzen.
+            Für die finale Version können hier echte Fotos von City Döner Frechen, dem Laden und den Gerichten eingebaut werden.
           </p>
         </div>
 
         <div class="gallery-grid">
           <div class="gallery-card large reveal">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80" alt="Pizza und Streetfood" />
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1400&q=80" alt="Pizza und Streetfood" />
             <div class="gallery-overlay">
               <strong>Pizza & Ofengerichte</strong>
-              <span>Visuell stark für Startseite, Social Media und Delivery-Fokus.</span>
+              <span>Ideal für einen starken ersten Eindruck auf der Startseite.</span>
             </div>
           </div>
 
           <div class="gallery-card reveal">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Schnitzel mit Pommes" />
+            <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=1200&q=80" alt="Döner Brot" />
             <div class="gallery-overlay">
-              <strong>Schnitzel</strong>
-              <span>Mit Pommes oder Reis laut Karte.</span>
+              <strong>Döner & Dürüm</strong>
+              <span>Die beliebtesten Produkte sofort sichtbar und hochwertig präsentiert.</span>
             </div>
           </div>
 
           <div class="gallery-card reveal">
-            <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?auto=format&fit=crop&w=1200&q=80" alt="Falafel und vegetarische Gerichte" />
+            <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?auto=format&fit=crop&w=1200&q=80" alt="Vegetarische Gerichte und Falafel" />
             <div class="gallery-overlay">
               <strong>Veggie / Falafel</strong>
-              <span>Auch vegetarische Gerichte sauber hervorgehoben.</span>
+              <span>Vegetarische Optionen klar und modern eingebunden.</span>
             </div>
           </div>
         </div>
@@ -798,28 +743,28 @@
         <div class="section-head reveal">
           <div>
             <span class="eyebrow">Stärken der Seite</span>
-            <h2 class="headline">Warum diese Version stärker ist als eine normale Imbiss-Website</h2>
+            <h2 class="headline">Warum diese Version für City Döner deutlich professioneller wirkt</h2>
           </div>
-          <p>Sie wirkt moderner, übersichtlicher und deutlich vertrauenswürdiger – vor allem mobil.</p>
+          <p>Mehr Übersicht, besseres mobiles Erlebnis und ein klarer Fokus auf echte Bestellungen.</p>
         </div>
 
         <div class="info-grid">
           <article class="card info-card reveal">
             <div class="icon">01</div>
-            <h3>Klarer Premium-Look</h3>
-            <p>Helle Flächen, hochwertige Food-Fotos, weiche Schatten und warme Gold-Akzente statt überladener Standardoptik.</p>
+            <h3>Klare Struktur</h3>
+            <p>Die Speisekarte ist filterbar, durchsuchbar und nicht mehr chaotisch oder überladen dargestellt.</p>
           </article>
 
           <article class="card info-card reveal">
             <div class="icon">02</div>
-            <h3>Saubere Speisekarte</h3>
-            <p>Gerichte sind filterbar, durchsuchbar und direkt zum Warenkorb hinzufügbar. Das wirkt modern und spart Scroll-Chaos.</p>
+            <h3>Besseres Bestellerlebnis</h3>
+            <p>Die Anfrage sitzt direkt unter den Produkten und ist damit logisch und elegant integriert.</p>
           </article>
 
           <article class="card info-card reveal">
             <div class="icon">03</div>
-            <h3>Bereit für Wachstum</h3>
-            <p>Bestellanfrage heute, Stripe/SumUp-Checkout später. Genau dadurch kannst du den Kunden zuerst einfach live bringen.</p>
+            <h3>Stärkerer Auftritt</h3>
+            <p>Die Seite wirkt hochwertiger, moderner und vertrauenswürdiger als typische Imbiss-Websites.</p>
           </article>
         </div>
       </div>
@@ -831,26 +776,26 @@
           <span class="eyebrow">Kontakt & Standort</span>
           <h3>City Döner Frechen</h3>
 
-          <div class="contact-row"><span>Adresse</span><strong>Hauptstraße 135, 50226 Frechen</strong></div>
+          <div class="contact-row"><span>Adresse</span><strong>Hauptstr. 135, 50226 Frechen</strong></div>
           <div class="contact-row"><span>Telefon 1</span><strong>0172 8787094</strong></div>
           <div class="contact-row"><span>Telefon 2</span><strong>017684060221</strong></div>
 
           <div class="contact-row">
             <span>Öffnungszeiten</span>
             <ul class="hours">
-              <li><strong>Montag–Sonntag</strong><span>11:00–22:00 Uhr</span></li>
+              <li><strong>Montag bis Sonntag</strong><span>11:00 Uhr – 22:00 Uhr</span></li>
             </ul>
           </div>
 
           <div class="contact-row">
             <span>Lieferzeiten</span>
             <ul class="hours">
-              <li><strong>Mo.–Sa.</strong><span>11:30–21:30 Uhr</span></li>
-              <li><strong>So.</strong><span>11:30–21:00 Uhr</span></li>
+              <li><strong>Mo. – Sa.</strong><span>11:30 – 21:30 Uhr</span></li>
+              <li><strong>So.</strong><span>11:30 – 21:00 Uhr</span></li>
             </ul>
           </div>
 
-          <div class="contact-row"><span>Lieferung</span><strong>ab 15,00 €</strong></div>
+          <div class="contact-row"><span>Lieferung</span><strong>ab 15 Euro</strong></div>
 
           <div class="contact-row">
             <span>Instagram</span>
@@ -879,25 +824,11 @@
 
   <footer>
     <div class="container footer-wrap">
-      <p>© 2026 City Döner Frechen · Moderne Demo-Website für direkten Bestellfokus</p>
-
+      <p>© 2026 City Döner Frechen · Moderne Bestellseite für Abholung & Lieferung</p>
       <div class="footer-links">
         <a href="#menu">Speisekarte</a>
         <a href="#order">Bestellen</a>
         <a href="#contact">Kontakt</a>
-        <a
-          class="footer-social"
-          href="https://www.instagram.com/citydoener_frechen/"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color:#d62976">
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-          </svg>
-          Instagram
-        </a>
       </div>
     </div>
   </footer>
@@ -914,49 +845,53 @@
 
   <script>
     const menuData = [
-      {id:1, category:'doener', name:'Döner Tasche', price:7.00, desc:'Kalb- oder Hähnchenfleisch im Fladenbrot mit Salat und Sauce.', tags:['Bestseller','Halal']},
-      {id:2, category:'doener', name:'Jumbo Döner', price:9.90, desc:'Große Portion Döner im Fladenbrot.', tags:['Groß','Bestseller']},
-      {id:3, category:'doener', name:'Döner Dürüm', price:8.50, desc:'Dönerfleisch im Yufka gerollt.', tags:['To-Go','Beliebt']},
-      {id:4, category:'doener', name:'Pommdöner klein', price:4.00, desc:'Pommes mit Dönerfleisch und Sauce, kleine Portion.', tags:['Snack']},
-      {id:5, category:'doener', name:'Pommdöner groß', price:7.50, desc:'Pommes, Dönerfleisch und Saucen in großer Portion.', tags:['Groß']},
-      {id:6, category:'doener', name:'Salat Box Dönerfleisch', price:7.00, desc:'Salat mit Dönerfleisch und Sauce.', tags:['Leichter']},
-      {id:7, category:'doener', name:'Döner Teller', price:12.00, desc:'Dönerfleisch mit Pommes oder Reis und Salat.', tags:['Teller']},
-      {id:8, category:'doener', name:'Döner Teller komplett', price:15.00, desc:'Dönerfleisch, Pommes, Reis, Salat und Sauce.', tags:['Premium Teller']},
-      {id:9, category:'doener', name:'Döner Portion (nur Fleisch) klein', price:9.90, desc:'Kleine Portion reines Dönerfleisch.', tags:['Protein']},
-      {id:10, category:'doener', name:'Döner Portion (nur Fleisch) groß', price:15.00, desc:'Große Portion reines Dönerfleisch.', tags:['Groß']},
-      {id:11, category:'lahmacun', name:'Lahmacun', price:3.50, desc:'Türkische Pizza mit Hackfleisch.', tags:['Klassiker']},
-      {id:12, category:'lahmacun', name:'Lahmacun mit Salat', price:6.00, desc:'Lahmacun mit frischem Salat.', tags:['Frisch']},
-      {id:13, category:'lahmacun', name:'Lahmacun mit Dönerfleisch', price:10.00, desc:'Lahmacun mit zusätzlichem Dönerfleisch.', tags:['Beliebt']},
-      {id:14, category:'lahmacun', name:'Pide Gouda Käse', price:8.50, desc:'Pide mit Gouda-Käse.', tags:['Pide']},
-      {id:15, category:'lahmacun', name:'Pide Weich Käse', price:9.50, desc:'Pide mit Weichkäse.', tags:['Pide']},
-      {id:16, category:'lahmacun', name:'Pide Hackfleisch', price:10.00, desc:'Pide mit Hackfleisch.', tags:['Pide']},
-      {id:17, category:'lahmacun', name:'Pide Sucuk & Käse', price:10.00, desc:'Pide mit Sucuk und Käse.', tags:['Pide']},
-      {id:18, category:'lahmacun', name:'Pide mit Dönerfleisch', price:10.00, desc:'Pide mit Dönerfleisch.', tags:['Pide']},
-      {id:19, category:'pizza', name:'Pizza Margherita', price:8.00, desc:'Klassisch mit Tomate und Käse.', tags:['30 cm']},
-      {id:20, category:'pizza', name:'Pizza Zwiebeln', price:9.00, desc:'Mit Zwiebeln belegt.', tags:['30 cm']},
-      {id:21, category:'pizza', name:'Pizza Champignons', price:9.50, desc:'Mit Champignons.', tags:['30 cm']},
-      {id:22, category:'pizza', name:'Pizza Spinat', price:9.50, desc:'Mit Spinat.', tags:['30 cm']},
-      {id:23, category:'pizza', name:'Pizza Salami', price:9.50, desc:'Mit Salami.', tags:['30 cm']},
-      {id:24, category:'pizza', name:'Pizza Thunfisch', price:10.00, desc:'Mit Thunfisch.', tags:['30 cm']},
-      {id:25, category:'pizza', name:'Pizza Vegetarisch', price:11.00, desc:'Nach Wahl mit 2 Zutaten.', tags:['30 cm','Veggie']},
-      {id:26, category:'pizza', name:'Pizza Döner', price:11.50, desc:'Mit Döner Kalb oder Hähnchen.', tags:['30 cm','Bestseller']},
-      {id:'26a', category:'pizza', name:'Pizza Hollandais', price:14.00, desc:'Hähnchenfleisch, Brokkoli, Mais, Pilze.', tags:['30 cm','Spezial']},
-      {id:27, category:'pizza', name:'Pizza Hawaii', price:11.50, desc:'Mit Ananas und Schinken.', tags:['30 cm']},
-      {id:28, category:'pizza', name:'Pizza Diavola', price:12.00, desc:'Würzig und scharf.', tags:['30 cm','Scharf']},
-      {id:29, category:'pizza', name:'Pizza Caprese', price:12.00, desc:'Frischer mediterraner Stil.', tags:['30 cm']},
-      {id:30, category:'pizza', name:'Pizza 4 Jahreszeiten', price:13.00, desc:'Champignon, Spinat, Schinken und Salami.', tags:['30 cm']},
-      {id:31, category:'pizza', name:'Pizza Istanbul (Spezial)', price:14.00, desc:'Dönerfleisch, Zwiebel, Peperoni, Oliven, Weichkäse.', tags:['30 cm','Spezial']},
-      {id:32, category:'pizza', name:'Party Pizza 60x40 cm', price:0.00, desc:'Gouda Käse, jeder weitere Belag 5 Euro.', tags:['Party','Preis auf Anfrage']},
-      {id:33, category:'schnitzel', name:'Wiener Schnitzel', price:12.00, desc:'Mit Salat und Pommes oder Reis.', tags:['Putenfleisch']},
-      {id:34, category:'schnitzel', name:'Jäger Schnitzel', price:13.50, desc:'Mit Salat und Pommes oder Reis.', tags:['Putenfleisch']},
-      {id:35, category:'schnitzel', name:'Paprika Schnitzel', price:14.00, desc:'Pikante Tomatensauce, mit Salat und Pommes oder Reis.', tags:['Putenfleisch']},
-      {id:36, category:'schnitzel', name:'Rahm Schnitzel', price:14.50, desc:'Hollandaise mit Käse überbacken, mit Salat und Pommes oder Reis.', tags:['Putenfleisch']},
-      {id:37, category:'veggie', name:'Falafel Tasche', price:7.00, desc:'Hausgemacht und täglich frisch.', tags:['Veggie']},
-      {id:38, category:'veggie', name:'Falafel Dürüm', price:8.00, desc:'Falafel im Yufka gerollt.', tags:['Veggie']},
-      {id:39, category:'veggie', name:'Falafel Teller', price:11.00, desc:'Falafel Teller als volle Mahlzeit.', tags:['Veggie']},
-      {id:40, category:'veggie', name:'Halloumi Tasche', price:6.50, desc:'Mit Halloumi im Brot.', tags:['Vegetarisch']},
-      {id:41, category:'veggie', name:'Halloumi Teller', price:10.00, desc:'Tellergericht mit Halloumi.', tags:['Vegetarisch']},
-      {id:42, category:'veggie', name:'Halloumi Falafel Teller', price:13.50, desc:'Kombination aus Halloumi und Falafel.', tags:['Vegetarisch','Groß']}
+      {id:'01', category:'doener', name:'Döner Tasche', price:7.00, desc:'Kalb- oder Hähnchenfleisch im Fladenbrot mit Salat und Sauce.', tags:['Bestseller','Halal']},
+      {id:'02', category:'doener', name:'Jumbo Döner', price:9.90, desc:'Große Portion Döner im Fladenbrot.', tags:['Groß','Beliebt']},
+      {id:'03', category:'doener', name:'Döner Dürüm', price:8.50, desc:'Dönerfleisch im Yufka gerollt.', tags:['To-Go']},
+      {id:'04', category:'doener', name:'Pommdöner klein', price:4.00, desc:'Pommes mit Dönerfleisch und Sauce in kleiner Portion.', tags:['Snack']},
+      {id:'05', category:'doener', name:'Pommdöner groß', price:7.50, desc:'Pommes mit Dönerfleisch und Saucen in großer Portion.', tags:['Groß']},
+      {id:'06', category:'doener', name:'Salat Box Dönerfleisch', price:7.00, desc:'Salat mit Dönerfleisch und Sauce.', tags:['Leicht']},
+      {id:'07', category:'doener', name:'Döner Teller', price:12.00, desc:'Dönerfleisch mit Pommes oder Reis und Salat.', tags:['Teller']},
+      {id:'08', category:'doener', name:'Döner Teller komplett', price:15.00, desc:'Dönerfleisch, Pommes, Reis, Salat und Saucen.', tags:['Premium Teller']},
+      {id:'09', category:'doener', name:'Döner Portion (nur Fleisch) klein', price:9.90, desc:'Kleine Portion reines Dönerfleisch.', tags:['Protein']},
+      {id:'10', category:'doener', name:'Döner Portion (nur Fleisch) groß', price:15.00, desc:'Große Portion reines Dönerfleisch.', tags:['Groß']},
+
+      {id:'11', category:'lahmacun', name:'Lahmacun', price:3.50, desc:'Türkische Pizza mit Hackfleisch.', tags:['Klassiker']},
+      {id:'12', category:'lahmacun', name:'Lahmacun mit Salat', price:6.00, desc:'Türkische Pizza mit Hackfleisch und frischem Salat.', tags:['Frisch']},
+      {id:'13', category:'lahmacun', name:'Lahmacun mit Dönerfleisch', price:10.00, desc:'Lahmacun mit zusätzlichem Dönerfleisch.', tags:['Beliebt']},
+      {id:'14', category:'lahmacun', name:'Pide Gouda Käse', price:8.50, desc:'Pide mit Gouda Käse.', tags:['Pide']},
+      {id:'15', category:'lahmacun', name:'Pide Weich Käse', price:9.50, desc:'Pide mit Weichkäse.', tags:['Pide']},
+      {id:'16', category:'lahmacun', name:'Pide Hackfleisch', price:10.00, desc:'Pide mit Hackfleisch.', tags:['Pide']},
+      {id:'17', category:'lahmacun', name:'Pide Sucuk & Käse', price:10.00, desc:'Pide mit Sucuk und Käse.', tags:['Pide']},
+      {id:'18', category:'lahmacun', name:'Pide mit Dönerfleisch', price:10.00, desc:'Pide mit Dönerfleisch.', tags:['Pide']},
+
+      {id:'19', category:'pizza', name:'Pizza Margherita', price:8.00, desc:'30 cm Pizza mit Tomatensauce und Käse.', tags:['30 cm']},
+      {id:'20', category:'pizza', name:'Pizza Zwiebeln', price:9.00, desc:'30 cm Pizza mit Zwiebeln.', tags:['30 cm']},
+      {id:'21', category:'pizza', name:'Pizza Champignons', price:9.50, desc:'30 cm Pizza mit Champignons.', tags:['30 cm']},
+      {id:'22', category:'pizza', name:'Pizza Spinat', price:9.50, desc:'30 cm Pizza mit Spinat.', tags:['30 cm']},
+      {id:'23', category:'pizza', name:'Pizza Salami', price:9.50, desc:'30 cm Pizza mit Salami.', tags:['30 cm']},
+      {id:'24', category:'pizza', name:'Pizza Thunfisch', price:10.00, desc:'30 cm Pizza mit Thunfisch.', tags:['30 cm']},
+      {id:'25', category:'pizza', name:'Pizza Vegetarisch', price:11.00, desc:'30 cm Pizza nach Wahl mit 2 Zutaten.', tags:['30 cm','Veggie']},
+      {id:'26', category:'pizza', name:'Pizza Döner', price:11.50, desc:'30 cm Pizza mit Döner Kalb oder Hähnchen.', tags:['30 cm','Bestseller']},
+      {id:'26a', category:'pizza', name:'Pizza Hollandais', price:14.00, desc:'Hähnchenfleisch, Brokkoli, Mais und Pilze.', tags:['30 cm','Spezial']},
+      {id:'27', category:'pizza', name:'Pizza Hawaii', price:11.50, desc:'30 cm Pizza Hawaii.', tags:['30 cm']},
+      {id:'28', category:'pizza', name:'Pizza Diavola', price:12.00, desc:'30 cm Pizza Diavola.', tags:['30 cm','Scharf']},
+      {id:'29', category:'pizza', name:'Pizza Caprese', price:12.00, desc:'30 cm Pizza Caprese.', tags:['30 cm']},
+      {id:'30', category:'pizza', name:'Pizza 4 Jahreszeiten', price:13.00, desc:'Champignon, Spinat, Schinken und Salami.', tags:['30 cm']},
+      {id:'31', category:'pizza', name:'Pizza Istanbul (Spezial)', price:14.00, desc:'Dönerfleisch, Zwiebel, Peperoni, Oliven und Weichkäse.', tags:['30 cm','Spezial']},
+      {id:'32', category:'pizza', name:'Party Pizza 60×40 cm', price:0.00, desc:'Gouda Käse, jeder weitere Belag 5 Euro.', tags:['Party','Preis auf Anfrage']},
+
+      {id:'33', category:'schnitzel', name:'Wiener Schnitzel', price:12.00, desc:'Mit Salat und Pommes oder Reis.', tags:['Putenfleisch']},
+      {id:'34', category:'schnitzel', name:'Jäger Schnitzel', price:13.50, desc:'Mit Salat und Pommes oder Reis.', tags:['Putenfleisch']},
+      {id:'35', category:'schnitzel', name:'Paprika Schnitzel', price:14.00, desc:'Mit pikanter Tomatensauce, Salat und Pommes oder Reis.', tags:['Putenfleisch']},
+      {id:'36', category:'schnitzel', name:'Rahm Schnitzel', price:14.50, desc:'Mit Hollandaise und Käse überbacken, dazu Salat und Pommes oder Reis.', tags:['Putenfleisch']},
+
+      {id:'37', category:'veggie', name:'Falafel Tasche', price:7.00, desc:'Hausgemacht und täglich frisch.', tags:['Veggie']},
+      {id:'38', category:'veggie', name:'Falafel Dürüm', price:8.00, desc:'Falafel im Yufka gerollt.', tags:['Veggie']},
+      {id:'39', category:'veggie', name:'Falafel Teller', price:11.00, desc:'Falafel Teller als volle Mahlzeit.', tags:['Veggie']},
+      {id:'40', category:'veggie', name:'Halloumi Tasche', price:6.50, desc:'Mit Halloumi im Brot.', tags:['Vegetarisch']},
+      {id:'41', category:'veggie', name:'Halloumi Teller', price:10.00, desc:'Tellergericht mit Halloumi.', tags:['Vegetarisch']},
+      {id:'42', category:'veggie', name:'Halloumi Falafel Teller', price:13.50, desc:'Kombination aus Halloumi und Falafel.', tags:['Vegetarisch','Groß']}
     ];
 
     const cart = [];
@@ -981,7 +916,7 @@
 
     function euro(value){
       if(value === 0) return 'Preis auf Anfrage';
-      return value.toLocaleString('de-DE', { style:'currency', currency:'EUR' });
+      return value.toLocaleString('de-DE', {style:'currency', currency:'EUR'});
     }
 
     function escapeHtml(value){
@@ -998,7 +933,7 @@
 
       const filtered = menuData.filter(item => {
         const matchesFilter = currentFilter === 'all' || item.category === currentFilter;
-        const haystack = `${item.name} ${item.desc} ${(item.tags || []).join(' ')}`.toLowerCase();
+        const haystack = `${item.name} ${item.desc} ${(item.tags||[]).join(' ')}`.toLowerCase();
         const matchesSearch = haystack.includes(search);
         return matchesFilter && matchesSearch;
       });
@@ -1009,15 +944,11 @@
         const row = document.createElement('article');
         row.className = 'menu-item';
 
-        const safeId = String(item.id).replace(/'/g, "\\'");
-        const safeName = escapeHtml(item.name);
-        const safeDesc = escapeHtml(item.desc);
-
         row.innerHTML = `
           <div class="menu-top">
             <div>
-              <h3>${escapeHtml(String(item.id))}. ${safeName}</h3>
-              <p class="menu-desc">${safeDesc}</p>
+              <h3>${escapeHtml(item.id)}. ${escapeHtml(item.name)}</h3>
+              <p class="menu-desc">${escapeHtml(item.desc)}</p>
             </div>
             <strong class="price">${euro(item.price)}</strong>
           </div>
@@ -1032,12 +963,11 @@
             </div>
             <button
               class="btn btn-primary"
-              ${item.price === 0 ? 'disabled' : `onclick="addToCart('${safeId}')"`}>
+              ${item.price === 0 ? 'disabled style="opacity:.6;cursor:not-allowed"' : `onclick="addToCart('${String(item.id).replace(/'/g, "\\'")}')"`}>
               ${item.price === 0 ? 'Anfragen' : 'Hinzufügen'}
             </button>
           </div>
         `;
-
         menuList.appendChild(row);
       });
     }
@@ -1067,7 +997,7 @@
       if(existing){
         existing.qty += qty;
       } else {
-        cart.push({ ...item, qty });
+        cart.push({...item, qty});
       }
 
       qtyEl.textContent = 1;
@@ -1077,7 +1007,6 @@
 
     function updateCart(){
       cartItems.innerHTML = '';
-
       const orderType = document.querySelector('input[name="orderType"]:checked').value;
 
       if(cart.length === 0){
@@ -1114,7 +1043,11 @@
       stickyCount.textContent = `${itemCount} Artikel`;
       stickyTotal.textContent = `${euro(total)} gesamt`;
 
-      stickyBar.style.display = itemCount > 0 && window.innerWidth <= 780 ? 'block' : 'none';
+      if(window.innerWidth <= 780 && itemCount > 0){
+        stickyBar.style.display = 'block';
+      } else {
+        stickyBar.style.display = 'none';
+      }
     }
 
     function changeCartQty(index, change){
@@ -1135,9 +1068,7 @@
       successBox.style.display = 'block';
       errorBox.style.display = 'none';
       clearTimeout(window.successTimeout);
-      window.successTimeout = setTimeout(() => {
-        successBox.style.display = 'none';
-      }, 2800);
+      window.successTimeout = setTimeout(() => successBox.style.display = 'none', 2800);
     }
 
     function showError(message){
@@ -1145,9 +1076,7 @@
       errorBox.style.display = 'block';
       successBox.style.display = 'none';
       clearTimeout(window.errorTimeout);
-      window.errorTimeout = setTimeout(() => {
-        errorBox.style.display = 'none';
-      }, 3200);
+      window.errorTimeout = setTimeout(() => errorBox.style.display = 'none', 3200);
     }
 
     function updateOrderTypeStyles(){
@@ -1165,7 +1094,6 @@
       const time = document.getElementById('customerTime').value;
       const payment = document.getElementById('customerPayment').value;
       const orderType = document.querySelector('input[name="orderType"]:checked').value;
-
       const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
       const deliveryFee = orderType === 'Lieferung' && subtotal > 0 ? DELIVERY_FEE : 0;
       const total = subtotal + deliveryFee;
@@ -1229,7 +1157,7 @@
       entries.forEach(entry => {
         if(entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.12 });
+    }, {threshold: 0.12});
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     window.addEventListener('resize', updateCart);
