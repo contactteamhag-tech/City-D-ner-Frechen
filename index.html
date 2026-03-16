@@ -11,19 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f0f10;
-      --bg-soft:#171719;
-      --bg-card:#1f2023;
-      --line:rgba(255,255,255,.08);
-      --line-strong:rgba(255,255,255,.16);
-      --text:#f5f5f5;
-      --muted:#b8b8b8;
-      --accent:#f5c400;
-      --accent-strong:#ffdd33;
-      --accent-dark:#9b7300;
-      --danger:#ff6b57;
-      --success:#2ecc71;
-      --shadow:0 24px 60px rgba(0,0,0,.35);
+      --bg:#f6f7fb;
+      --bg-soft:#ffffff;
+      --bg-card:rgba(255,255,255,.92);
+      --line:rgba(15,23,42,.08);
+      --line-strong:rgba(15,23,42,.14);
+      --text:#0f172a;
+      --muted:#5f6b7a;
+      --accent:#ffbf00;
+      --accent-strong:#ffd84d;
+      --accent-dark:#8c6a00;
+      --danger:#e85d4a;
+      --success:#1f9d62;
+      --shadow:0 20px 55px rgba(15,23,42,.10);
       --radius:24px;
       --radius-sm:16px;
       --max:1240px;
@@ -35,9 +35,9 @@
       font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at top right, rgba(245,196,0,.14), transparent 28%),
-        radial-gradient(circle at left center, rgba(245,196,0,.08), transparent 24%),
-        linear-gradient(180deg, #111214 0%, #0d0e10 100%);
+        radial-gradient(circle at top right, rgba(255,191,0,.16), transparent 24%),
+        radial-gradient(circle at left center, rgba(255,191,0,.10), transparent 20%),
+        linear-gradient(180deg, #fbfcff 0%, #f3f6fb 52%, #eef2f8 100%);
       line-height:1.5;
       overflow-x:hidden;
     }
@@ -76,9 +76,10 @@
 
     header{
       position:sticky;top:0;z-index:40;
-      backdrop-filter:blur(16px);
-      background:rgba(12,13,15,.75);
-      border-bottom:1px solid rgba(255,255,255,.05);
+      backdrop-filter:blur(18px);
+      background:rgba(255,255,255,.76);
+      border-bottom:1px solid rgba(15,23,42,.06);
+      box-shadow:0 8px 30px rgba(15,23,42,.05);
     }
     .nav{
       display:flex;align-items:center;justify-content:space-between;
@@ -103,7 +104,7 @@
       display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch;
     }
     .hero-main,.hero-side,.glass-card,.menu-card,.feature-card,.review-card,.faq-item,.contact-card,.cart-box,.order-box,.info-card{
-      background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.028));
+      background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.88));
       border:1px solid var(--line);
       box-shadow:var(--shadow);
       border-radius:var(--radius);
@@ -111,10 +112,10 @@
     .hero-main{
       padding:34px;
       background:
-        linear-gradient(120deg, rgba(0,0,0,.56), rgba(0,0,0,.18)),
-        radial-gradient(circle at right top, rgba(245,196,0,.16), transparent 30%),
+        linear-gradient(120deg, rgba(255,255,255,.82), rgba(255,255,255,.52)),
+        radial-gradient(circle at right top, rgba(255,191,0,.22), transparent 28%),
         url('hero-citydoener.jpg') center/cover no-repeat,
-        linear-gradient(135deg,#1f2023,#111214);
+        linear-gradient(135deg,#ffffff,#f4f7fb);
       min-height:620px;display:flex;flex-direction:column;justify-content:space-between;
       position:relative;overflow:hidden;
     }
@@ -126,12 +127,12 @@
     .hero-badges,.hero-stats,.delivery-points{display:flex;gap:12px;flex-wrap:wrap}
     .hero-copy{max-width:740px;position:relative;z-index:1}
     .hero-copy h1{font-size:clamp(2.7rem,6vw,5.6rem);line-height:.94;margin:18px 0 16px;letter-spacing:-.04em}
-    .hero-copy p{font-size:1.06rem;color:#e9e9e9;max-width:620px}
+    .hero-copy p{font-size:1.06rem;color:#334155;max-width:620px}
     .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
     .hero-stats{margin-top:30px}
     .stat{
       min-width:148px;padding:16px 18px;border-radius:18px;
-      background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.72);border:1px solid rgba(15,23,42,.08);
       backdrop-filter:blur(10px)
     }
     .stat strong{display:block;font-size:1.45rem;line-height:1.05}
@@ -153,8 +154,8 @@
       display:grid;grid-template-columns:repeat(4,1fr);gap:16px
     }
     .logo-box{
-      padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03);
-      text-align:center;color:#ddd;font-weight:700
+      padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.72);
+      text-align:center;color:#334155;font-weight:700
     }
 
     .features-grid,.reviews-grid,.faq-grid,.contact-grid,.about-grid,.service-grid{
@@ -174,9 +175,9 @@
     .about-image{
       min-height:500px;border-radius:var(--radius);
       background:
-        linear-gradient(120deg, rgba(0,0,0,.34), rgba(0,0,0,.08)),
+        linear-gradient(120deg, rgba(255,255,255,.50), rgba(255,255,255,.18)),
         url('storefront-citydoener.jpg') center/cover no-repeat,
-        linear-gradient(135deg,#2a2b2f,#111214);
+        linear-gradient(135deg,#f8fafc,#eef2f7);
       border:1px solid var(--line);box-shadow:var(--shadow)
     }
     .about-card{padding:30px}
@@ -196,7 +197,7 @@
     .menu-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
     .tab-btn{
       padding:12px 16px;border-radius:999px;border:1px solid var(--line);
-      background:rgba(255,255,255,.03);color:#ddd;cursor:pointer;font-weight:700
+      background:rgba(255,255,255,.84);color:#334155;cursor:pointer;font-weight:700
     }
     .tab-btn.active{background:linear-gradient(135deg,var(--accent),var(--accent-strong));color:#111;border-color:transparent}
     .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -233,7 +234,7 @@
     .checkout-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
     .checkout-grid label{display:block}
     .field,.select,.textarea{
-      width:100%;margin-top:8px;background:rgba(255,255,255,.04);color:#fff;
+      width:100%;margin-top:8px;background:rgba(255,255,255,.96);color:var(--text);
       border:1px solid var(--line);border-radius:16px;padding:14px 16px;outline:none;
     }
     .field:focus,.select:focus,.textarea:focus{border-color:rgba(245,196,0,.5);box-shadow:0 0 0 4px rgba(245,196,0,.08)}
@@ -281,9 +282,9 @@
     .hours{list-style:none;display:grid;gap:10px;margin-top:6px}
     .map-embed{
       border-radius:20px;overflow:hidden;min-height:370px;border:1px solid var(--line);
-      background:linear-gradient(135deg, rgba(245,196,0,.16), rgba(255,255,255,.04));display:grid;place-items:center;text-align:center;padding:28px
+      background:linear-gradient(135deg, rgba(255,191,0,.16), rgba(255,255,255,.88));display:grid;place-items:center;text-align:center;padding:28px
     }
-    .map-embed p{max-width:420px;color:#f1f1f1}
+    .map-embed p{max-width:420px;color:#334155}
 
     footer{padding:24px 0 42px;border-top:1px solid rgba(255,255,255,.06)}
     .footer-wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
@@ -292,9 +293,7 @@
 
     .sticky-order-bar{
       position:fixed;left:16px;right:16px;bottom:16px;z-index:45;display:none;
-      background:rgba(17,17,17,.92);backdrop-filter:blur(14px);border:1px solid var(--line-strong);
-      border-radius:22px;padding:14px;box-shadow:0 22px 50px rgba(0,0,0,.35)
-    }
+      background:
     .sticky-order-inner{display:flex;justify-content:space-between;gap:14px;align-items:center}
 
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease, transform .55s ease}
