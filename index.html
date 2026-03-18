@@ -379,16 +379,6 @@
     .gallery-overlay strong{display:block;font-size:1rem}
     .gallery-overlay span{display:block;color:#475569;font-size:.9rem;margin-top:4px}
 
-    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .info-card{padding:26px}
-    .icon{
-      width:54px;height:54px;border-radius:18px;display:grid;place-items:center;
-      background:linear-gradient(135deg, rgba(245,180,0,.22), rgba(226,75,43,.12));
-      font-weight:900;color:#8f6000;font-size:1.2rem
-    }
-    .info-card h3{margin:14px 0 10px;font-size:1.16rem}
-    .info-card p{color:var(--muted)}
-
     .contact-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:22px;align-items:stretch}
     .contact-card{padding:30px}
     .contact-card h3{font-size:1.4rem;margin-bottom:12px}
@@ -419,7 +409,7 @@
 
     @media (max-width:1120px){
       .hero-layout,.story-layout,.contact-layout{grid-template-columns:1fr}
-      .highlights-grid,.gallery-grid,.info-grid{grid-template-columns:1fr 1fr}
+      .highlights-grid,.gallery-grid{grid-template-columns:1fr 1fr}
       .menu-list,.order-inline-grid{grid-template-columns:1fr}
     }
 
@@ -427,7 +417,7 @@
       .nav-links{display:none}
       .nav-actions .btn-secondary{display:none}
       .hero-main{min-height:unset;padding:26px}
-      .field-group,.highlights-grid,.gallery-grid,.info-grid,.submit-row,.order-type{grid-template-columns:1fr}
+      .field-group,.highlights-grid,.gallery-grid,.submit-row,.order-type{grid-template-columns:1fr}
       .field-group label:nth-child(1),
       .field-group label:nth-child(2),
       .field-group label:nth-child(4),
@@ -551,16 +541,13 @@
         <div class="section-head reveal">
           <div>
             <span class="eyebrow">Highlights</span>
-            <h2 class="headline">Starke Gerichte, die auf den ersten Blick überzeugen</h2>
+            <h2 class="headline">Bestseller auf einen Blick</h2>
           </div>
-          <p>
-            Klare Präsentation, starke Bestseller und eine Speisekarte, die direkt zum Bestellen führt.
-          </p>
         </div>
 
         <div class="highlights-grid">
           <article class="highlight-card reveal">
-            <img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=1200&q=80" alt="Dönertasche" />
+            <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1200&q=80" alt="Döner Tasche" />
             <h4>Döner Tasche</h4>
             <p>Kalb- oder Hähnchenfleisch im Fladenbrot mit Salat und hausgemachter Sauce.</p>
             <strong class="price">7,00 €</strong>
@@ -574,7 +561,7 @@
           </article>
 
           <article class="highlight-card reveal">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Rahm Schnitzel" />
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1200&q=80" alt="Rahm Schnitzel" />
             <h4>Rahm Schnitzel</h4>
             <p>Mit Hollandaise und Käse überbacken, dazu Salat sowie Pommes oder Reis.</p>
             <strong class="price">14,50 €</strong>
@@ -620,9 +607,6 @@
             <span class="eyebrow">Komplette Speisekarte</span>
             <h2 class="headline">Alle Gerichte von City Döner Frechen übersichtlich aufbereitet</h2>
           </div>
-          <p>
-            Die Preise und Gerichte basieren auf der aktuellen Speisekarte. Darunter ist das Bestellsystem direkt integriert.
-          </p>
         </div>
 
         <div class="card menu-panel reveal">
@@ -759,9 +743,6 @@
             <span class="eyebrow">Restaurant-Galerie</span>
             <h2 class="headline">Alle echten City Döner Bilder einheitlich gesammelt</h2>
           </div>
-          <p>
-            Hier sind alle Restaurantbilder von City Döner Frechen zusammengefasst, damit die Galerie einheitlich, lokal und glaubwürdig wirkt.
-          </p>
         </div>
 
         <div class="gallery-grid">
@@ -812,38 +793,6 @@
               <span>Alle City-Döner-Fotos an einer Stelle.</span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="eyebrow">Stärken der Seite</span>
-            <h2 class="headline">Warum diese Version für City Döner deutlich professioneller wirkt</h2>
-          </div>
-          <p>Mehr Übersicht, besseres mobiles Erlebnis und ein klarer Fokus auf echte Bestellungen.</p>
-        </div>
-
-        <div class="info-grid">
-          <article class="card info-card reveal">
-            <div class="icon">01</div>
-            <h3>Klare Struktur</h3>
-            <p>Die Speisekarte ist filterbar, durchsuchbar und nicht mehr chaotisch oder überladen dargestellt.</p>
-          </article>
-
-          <article class="card info-card reveal">
-            <div class="icon">02</div>
-            <h3>Besseres Bestellerlebnis</h3>
-            <p>Die Anfrage sitzt direkt unter den Produkten und ist damit logisch und elegant integriert.</p>
-          </article>
-
-          <article class="card info-card reveal">
-            <div class="icon">03</div>
-            <h3>Stärkerer Auftritt</h3>
-            <p>Die Seite wirkt hochwertiger, moderner und vertrauenswürdiger als typische Imbiss-Websites.</p>
-          </article>
         </div>
       </div>
     </section>
